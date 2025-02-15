@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://et1u4h28hv2a"]
+[gd_scene load_steps=3 format=3 uid="uid://ch1ii2ee51yh2"]
 
-[sub_resource type="Theme" id="Theme_tp271"]
+[ext_resource type="Theme" uid="uid://3dbgvh1hymlk" path="res://new_theme.tres" id="1_fru4v"]
 
 [sub_resource type="Shortcut" id="Shortcut_wvy20"]
 
@@ -13,7 +13,7 @@ offset_right = 508.0
 offset_bottom = 288.0
 rotation = -0.00514891
 scale = Vector2(1.94802, 2.98586)
-theme = SubResource("Theme_tp271")
+theme = ExtResource("1_fru4v")
 theme_type_variation = &"#ffff"
 shortcut = SubResource("Shortcut_wvy20")
 text = "Playground Mode"
@@ -28,12 +28,6 @@ rotation = -0.016872
 text = "Welcome to Bit by Bit"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="Label"]
-layout_mode = 1
-anchors_preset = -1
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="LinkButton2" type="LinkButton" parent="."]
 offset_left = 374.0
