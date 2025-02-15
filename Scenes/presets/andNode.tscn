@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbshvmksc08og"]
+
+[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="1_2ucek"]
+[ext_resource type="Script" path="res://Scenes/presets/and_node.gd" id="1_x0j0m"]
+[ext_resource type="Script" path="res://scripts/socket.gd" id="2_a421n"]
+[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="2_dglb5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
+
+[node name="AndNode" type="Node2D"]
+script = ExtResource("1_x0j0m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.077922, 0.0779221)
+texture = ExtResource("1_2ucek")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -218.167
+offset_top = -141.167
+offset_right = -168.167
+offset_bottom = -115.167
+scale = Vector2(12.7721, 12.7721)
+size_flags_horizontal = 4
+text = "AND"
+tab_size = 24
+
+[node name="inputs" type="Node2D" parent="."]
+
+[node name="1" type="Area2D" parent="inputs"]
+position = Vector2(-32, -7)
+scale = Vector2(0.661781, 0.661781)
+script = ExtResource("2_a421n")
+status = true
+
+[node name="Sprite2D" type="Sprite2D" parent="inputs/1"]
+modulate = Color(0.051971, 0.051971, 0.051971, 1)
+scale = Vector2(0.0701754, 0.0701754)
+texture = ExtResource("2_dglb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/1"]
+shape = SubResource("CircleShape2D_m0yrc")
+
+[node name="2" type="Area2D" parent="inputs"]
+position = Vector2(-32, 8)
+scale = Vector2(0.661781, 0.661781)
+script = ExtResource("2_a421n")
+status = true
+
+[node name="Sprite2D" type="Sprite2D" parent="inputs/2"]
+modulate = Color(0.051971, 0.051971, 0.051971, 1)
+scale = Vector2(0.0701754, 0.0701754)
+texture = ExtResource("2_dglb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/2"]
+shape = SubResource("CircleShape2D_m0yrc")
+
+[node name="outputs" type="Node2D" parent="."]
+
+[node name="1" type="Area2D" parent="outputs"]
+position = Vector2(30, 0)
+scale = Vector2(0.661781, 0.661781)
+script = ExtResource("2_a421n")
+
+[node name="Sprite2D" type="Sprite2D" parent="outputs/1"]
+modulate = Color(0.051971, 0.051971, 0.051971, 1)
+scale = Vector2(0.0701754, 0.0701754)
+texture = ExtResource("2_dglb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/1"]
+shape = SubResource("CircleShape2D_m0yrc")
