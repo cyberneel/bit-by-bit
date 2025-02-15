@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0bfpa1ecuo5e"
-path="res://.godot/imported/socket.png-c83d1c06a7c8df8535ee3ab247a611ee.ctex"
+uid="uid://dvktukvtmrfsu"
+path="res://.godot/imported/Untitled.png-995000d4cc289d1cd39c54973708499b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/socket.png"
-dest_files=["res://.godot/imported/socket.png-c83d1c06a7c8df8535ee3ab247a611ee.ctex"]
+source_file="res://assets/sprites/Untitled.png"
+dest_files=["res://.godot/imported/Untitled.png-995000d4cc289d1cd39c54973708499b.ctex"]
 
 [params]
 
