@@ -1,3 +1,56 @@
-[gd_scene format=3 uid="uid://et1u4h28hv2a"]
+[gd_scene load_steps=3 format=3 uid="uid://et1u4h28hv2a"]
+
+[sub_resource type="Theme" id="Theme_l4aj7"]
+
+[sub_resource type="Shortcut" id="Shortcut_wvy20"]
 
 [node name="MainMenu" type="Node2D"]
+
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 372.0
+offset_top = 248.0
+offset_right = 508.0
+offset_bottom = 288.0
+scale = Vector2(1.94802, 2.98586)
+theme = SubResource("Theme_l4aj7")
+theme_type_variation = &"#ffff"
+shortcut = SubResource("Shortcut_wvy20")
+text = "Playground Mode"
+underline = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 262.0
+offset_top = 171.0
+offset_right = 747.0
+offset_bottom = 294.0
+rotation = -0.016872
+text = "Welcome to Bit by Bit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LinkButton2" type="LinkButton" parent="."]
+offset_left = 374.0
+offset_top = 312.0
+offset_right = 501.0
+offset_bottom = 352.0
+scale = Vector2(2.06243, 2.85985)
+text = "Calculator Mode"
+underline = 1
+
+[node name="LinkButton3" type="LinkButton" parent="."]
+offset_left = 371.0
+offset_top = 374.0
+offset_right = 495.0
+offset_bottom = 414.0
+scale = Vector2(2.1842, 2.67708)
+text = "Challenge Mode"
+underline = 1
+
+[node name="LinkButton4" type="LinkButton" parent="."]
+offset_left = 375.0
+offset_top = 444.0
+offset_right = 485.0
+offset_bottom = 484.0
+scale = Vector2(2.42464, 2.59456)
+text = "Settings Mode"
+underline = 1
