@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bef828cufqn32"]
 
-[ext_resource type="Texture2D" uid="uid://7q3y6ajtrt20" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+[ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 [ext_resource type="Script" path="res://scripts/playground_camera.gd" id="2_ny63l"]
 
 [node name="Node2D" type="Node2D"]
@@ -13,10 +13,10 @@ offset_bottom = 6701.0
 color = Color(0.0511026, 0.258716, 0.355542, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -11882.0
-offset_top = -8910.0
-offset_right = 12321.0
-offset_bottom = 6564.0
+offset_left = -12069.0
+offset_top = -9192.0
+offset_right = 12134.0
+offset_bottom = 6282.0
 texture = ExtResource("1_8m2ao")
 stretch_mode = 1
 
