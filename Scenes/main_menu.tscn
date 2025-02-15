@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch1ii2ee51yh2"]
+[gd_scene load_steps=3 format=3 uid="uid://et1u4h28hv2a"]
 
 [sub_resource type="Theme" id="Theme_l4aj7"]
 
@@ -27,6 +27,12 @@ rotation = -0.016872
 text = "Welcome to Bit by Bit"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Label"]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="LinkButton2" type="LinkButton" parent="."]
 offset_left = 374.0
