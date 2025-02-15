@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://bef828cufqn32"]
+[gd_scene load_steps=2 format=3 uid="uid://bef828cufqn32"]
+
+[ext_resource type="Texture2D" uid="uid://7q3y6ajtrt20" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -13642.0
+offset_top = -8715.0
+offset_right = 10549.0
+offset_bottom = 6664.0
+color = Color(0.0511026, 0.258716, 0.355542, 1)
+
+[node name="Grid-png" type="Sprite2D" parent="."]
+position = Vector2(581, 529)
+scale = Vector2(0.411, 0.384)
+texture = ExtResource("1_8m2ao")
