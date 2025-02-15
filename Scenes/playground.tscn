@@ -38,3 +38,5 @@ offset_right = 8.0
 offset_bottom = 8.0
 scale = Vector2(1.45369, 2.59979)
 text = "Back to Main Menu <---"
+
+[connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="Camera2D" method="_on_button_pressed"]
