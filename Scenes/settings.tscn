@@ -23,4 +23,32 @@ offset_right = 209.0
 offset_bottom = 67.0
 text = "Back to Main Menu <-----"
 
+[node name="Label" type="Label" parent="."]
+offset_left = 419.0
+offset_top = 23.0
+offset_right = 481.0
+offset_bottom = 46.0
+scale = Vector2(4.81339, 4.76622)
+text = "Settings"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 527.0
+offset_top = 152.0
+offset_right = 608.0
+offset_bottom = 183.0
+toggle_mode = true
+action_mode = 0
+keep_pressed_outside = true
+text = "Music Toggle"
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 306.0
+offset_top = 201.0
+offset_right = 314.0
+offset_bottom = 217.0
+scale = Vector2(36.545, 9.55015)
+max_value = 10.0
+tick_count = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="Button2" to="." method="_on_button_2_toggled"]
