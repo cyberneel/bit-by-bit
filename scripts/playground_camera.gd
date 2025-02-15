@@ -122,3 +122,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	zoom_goal = zoom_goal.clamp(minZoom * Vector2.ONE, maxZoom * Vector2.ONE)
 	last_mouse = current_mouse
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.
