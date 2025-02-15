@@ -2,7 +2,10 @@ extends Area2D
 
 class_name InputBit
 
-var status: bool = false
+@export_category("Input Bit")
+@export var onColor: Color = Color.FIREBRICK
+@export var offColor: Color = Color.DIM_GRAY
+@export var status: bool = false
 
 var mouseHover: bool = false
 
@@ -13,6 +16,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("click") and mouseHover:
 		status = !status
+		get_child(0).modulate = (onColor if status else offColor)
 		print(status)
 		
 	pass
