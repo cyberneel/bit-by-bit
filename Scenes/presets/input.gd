@@ -11,12 +11,12 @@ var mouseHover: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass # Replace with funghction body.
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("click") and mouseHover:
 		status = !status
-		get_child(0).modulate = (onColor if status else offColor)
+		get_parent().get_child(1).modulate = (onColor if status else offColor)
 		print(status)
 		
 	pass
