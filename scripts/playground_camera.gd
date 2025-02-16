@@ -10,7 +10,7 @@ class_name CameraZoomAndPan
 
 #region Exported Parameters
 @export_range(1, 20, 0.01) var maxZoom : float = 5.0
-@export_range(0.01, 1, 0.01) var minZoom : float = 0.1
+@export_range(0.01, 1, 0.01) var minZoom : float = 0.8
 @export_range(0.01, 0.2, 0.01) var zoomStepRatio : float = 0.1
 
 @export_group("Actions")
