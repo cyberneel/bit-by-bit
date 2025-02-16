@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=10 format=4 uid="uid://bbwlpdqfju23a"]
 
-[ext_resource type="Texture2D" uid="uid://ghakcbhrk5s0" path="res://assets/sprites/GUI.png" id="1_7j3ml"]
+[ext_resource type="Texture2D" uid="uid://c3tv6wuqy8x3t" path="res://assets/sprites/GUI.png" id="1_7j3ml"]
 
 [sub_resource type="Image" id="Image_miwsj"]
 data = {
@@ -1168,33 +1168,17 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0aj8y"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.225, 0.225, 0.225, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qsqdw"]
+texture = ExtResource("1_7j3ml")
+region_rect = Rect2(113, 113, 30, 14)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bktf1"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ph11o"]
 texture = ExtResource("1_7j3ml")
 region_rect = Rect2(113, 81, 30, 14)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6dvg"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3d6u"]
+texture = ExtResource("1_7j3ml")
+region_rect = Rect2(113, 98, 30, 13)
 
 [resource]
 Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -1218,6 +1202,6 @@ Button/font_sizes/font_size = 16
 Button/fonts/font = SubResource("FontFile_eawt2")
 Button/styles/disabled = SubResource("StyleBoxFlat_bkbf5")
 Button/styles/focus = SubResource("StyleBoxFlat_kp5hn")
-Button/styles/hover = SubResource("StyleBoxFlat_0aj8y")
-Button/styles/normal = SubResource("StyleBoxTexture_bktf1")
-Button/styles/pressed = SubResource("StyleBoxFlat_n6dvg")
+Button/styles/hover = SubResource("StyleBoxTexture_qsqdw")
+Button/styles/normal = SubResource("StyleBoxTexture_ph11o")
+Button/styles/pressed = SubResource("StyleBoxTexture_i3d6u")

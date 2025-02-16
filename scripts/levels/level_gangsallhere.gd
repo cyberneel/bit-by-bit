@@ -2,7 +2,7 @@ extends Node
 
 const AND_nodes = 1
 const OR_nodes = 1
-const NOT_nodes = 2
+const NOT_nodes = 1
 const NAND_nodes = 1
 const NOR_nodes = 1
 const XOR_nodes = 1
@@ -54,8 +54,6 @@ func _process(delta: float) -> void:
 	$"Camera2D/CanvasLayer/Tool Bar/XNOR_Counter".text = "x" + str(XNOR_nodes - XNOR_nodes_placed)
 	if($output.get_child(3).get_child(0).status and AND_nodes - AND_nodes_placed >= 0 and OR_nodes - OR_nodes_placed >= 0 and NOT_nodes - NOT_nodes_placed >= 0 and NAND_nodes - NAND_nodes_placed >= 0 and NOR_nodes - NOR_nodes_placed >= 0 and XOR_nodes - XOR_nodes_placed >= 0 and XNOR_nodes - XNOR_nodes_placed >= 0 and $Input.get_child(3).get_child(0).status and $Grapher.connections.size() >= 13):
 		$Win.show()
-	else:
-		$Win.hide()
 	pass
 
 func _on_input_pressed() -> void:
