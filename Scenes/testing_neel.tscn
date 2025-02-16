@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxndfhg6bhjyk"]
+[gd_scene load_steps=9 format=3 uid="uid://dxndfhg6bhjyk"]
 
 [ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="1_damvq"]
 [ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="3_klokk"]
 [ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="5_gceud"]
 [ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="6_fo75n"]
+[ext_resource type="PackedScene" uid="uid://beqm2xqbf64o0" path="res://Scenes/presets/xor_node.tscn" id="8_mv7py"]
 
 [node name="TestingNeel" type="Node2D"]
 
@@ -48,3 +49,7 @@ scale = Vector2(2.93464, 2.93464)
 [node name="NandNode" parent="." instance=ExtResource("6_fo75n")]
 position = Vector2(448, 528)
 scale = Vector2(2.79858, 2.79858)
+
+[node name="XorNode" parent="." instance=ExtResource("8_mv7py")]
+position = Vector2(953, 114)
+scale = Vector2(2.73503, 2.73503)
