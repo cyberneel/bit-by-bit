@@ -16,10 +16,10 @@ offset_bottom = 6701.0
 color = Color(0.0511026, 0.258716, 0.355542, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -13283.0
-offset_top = -9013.0
-offset_right = 10920.0
-offset_bottom = 6461.0
+offset_left = -12802.0
+offset_top = -9051.0
+offset_right = 11401.0
+offset_bottom = 6423.0
 texture = ExtResource("1_8m2ao")
 stretch_mode = 1
 
