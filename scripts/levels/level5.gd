@@ -1,5 +1,7 @@
 extends Node
 
+const NOR_nodes = 1
+var NOR_nodes_placed = 0
 
 var inputs: int
 var outputs: int
@@ -21,6 +23,7 @@ var inputPreset = preload("res://Scenes/presets/input.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(str(inputs) + '->' + str(outputs))
+	$Win.hide()
 	#input = inputPreset.instantiate()
 	#add_child(input)
 
@@ -29,7 +32,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$"Camera2D/CanvasLayer/Tool Bar/NOR_Counter".text = "x" + str(NOR_nodes - NOR_nodes_placed)
+	if($output.get_child(3).get_child(0).status and NOR_nodes - NOR_nodes_placed == 0 and (not $Input.get_child(3).get_child(0).status and not $Input2.get_child(3).get_child(0).status) and $Grapher.connections.size() >= 3):
+		$Win.show()
+	else:
+		$Win.hide()
 	pass
+
 func _on_input_pressed() -> void:
 	var inputInstance = input.instantiate()
 	inputInstance.position = get_node("Camera2D").position
@@ -55,10 +64,15 @@ func _on_nand_pressed() -> void:
 	nandInstance.position = get_node("Camera2D").position
 	add_child(nandInstance)
 func _on_nor_pressed() -> void:
-	var norInstance = norGate.instantiate()
-	norInstance.scale *= 2
-	norInstance.position = get_node("Camera2D").position
-	add_child(norInstance)
+	if(NOR_nodes_placed >= NOR_nodes):
+		pass
+	else:
+		var norInstance = norGate.instantiate()
+		norInstance.scale *= 2
+		norInstance.position = get_node("Camera2D").position
+		add_child(norInstance)
+		NOR_nodes_placed += 1
+		
 func _on_xor_pressed() -> void:
 	var xorInstance = xorGate.instantiate()
 	xorInstance.scale *= 2
