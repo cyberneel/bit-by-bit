@@ -3,7 +3,7 @@ extends Area2D
 class_name OutputBit
 
 @export_category("Output Bit")
-@export var onColor: Color = Color.FIREBRICK
+@export var onColor: Color = Color.GREEN_YELLOW
 @export var offColor: Color = Color.DIM_GRAY
 @export var inSocket: Socket
 

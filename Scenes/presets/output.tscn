@@ -30,6 +30,7 @@ region_rect = Rect2(19, 397, 14, 14)
 script = ExtResource("3_wfymi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("CircleShape2D_tnpoa")
 
 [node name="inputs" type="Node2D" parent="."]
