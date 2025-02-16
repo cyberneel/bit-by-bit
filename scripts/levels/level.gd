@@ -1,5 +1,7 @@
 extends Node
 
+const NOT_nodes = 1
+var NOT_nodes_placed = 0
 
 var inputs: int
 var outputs: int
@@ -21,6 +23,9 @@ var inputPreset = preload("res://Scenes/presets/input.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(str(inputs) + '->' + str(outputs))
+	$Win.hide()
+	$Grapher.create_connection($Input.get_child(3).get_child(0), $output.get_child(3).get_child(0))
+	$Input.get_child(2).toggle()
 	#input = inputPreset.instantiate()
 	#add_child(input)
 
@@ -29,16 +34,26 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$"Camera2D/CanvasLayer/Tool Bar/NOT_Counter".text = "x" + str(NOT_nodes - NOT_nodes_placed)
+	if((not $output.get_child(3).get_child(0).status) and NOT_nodes - NOT_nodes_placed == 0 and $Input.get_child(3).get_child(0).status and $Grapher.connections.size() >= 2):
+		$Win.show()
 	pass
+
+
 func _on_input_pressed() -> void:
 	var inputInstance = input.instantiate()
 	inputInstance.position = get_node("Camera2D").position
 	add_child(inputInstance)
 func _on_not_pressed() -> void:
-	var notInstance = notGate.instantiate()
-	notInstance.scale *= 2
-	notInstance.position = get_node("Camera2D").position
-	add_child(notInstance)
+	if(NOT_nodes_placed >= NOT_nodes):
+		pass
+	else:
+		var notInstance = notGate.instantiate()
+		notInstance.scale *= 2
+		notInstance.position = get_node("Camera2D").position
+		add_child(notInstance)
+		NOT_nodes_placed += 1
+	
 func _on_and_pressed() -> void:
 	var andInstance = andGate.instantiate()
 	andInstance.scale *= 2

@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0jhfgk42wh7e"]
+[gd_scene load_steps=4 format=3 uid="uid://beax3wbyurihf"]
 
 [ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="1_scfbp"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_aub3m"]
-[ext_resource type="PackedScene" uid="uid://75256y8qkxql" path="res://Scenes/presets/andNode.tscn" id="3_blt1g"]
+[ext_resource type="PackedScene" uid="uid://dhrl06ead8vic" path="res://Scenes/presets/andNode.tscn" id="3_blt1g"]
 
 [node name="TestingKevin" type="Node2D"]
 
@@ -24,7 +24,9 @@ position = Vector2(0, 1)
 [node name="Input" parent="." instance=ExtResource("2_aub3m")]
 position = Vector2(86, 129)
 scale = Vector2(3.32971, 3.32971)
+script = null
 
 [node name="Input2" parent="." instance=ExtResource("2_aub3m")]
 position = Vector2(86, 293)
 scale = Vector2(3.32971, 3.32971)
+script = null

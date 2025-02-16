@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/presets/and_node.gd" id="1_x0j0m"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="2_a421n"]
-[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_vv276"]
-[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_nygy3"]
+[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_vv276"]
+[ext_resource type="FontFile" uid="uid://0ikk8l64boqr" path="res://assets/fonts/Pixelme.ttf" id="3_nygy3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
 

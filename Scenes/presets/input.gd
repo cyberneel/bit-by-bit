@@ -34,3 +34,8 @@ func _on_mouse_exited() -> void:
 func _on_mouse_entered() -> void:
 	mouseHover = true
 	pass # Replace with function body.
+
+func toggle():
+	outSocket.status = !outSocket.status
+	get_parent().get_child(1).modulate = (onColor if outSocket.status else offColor)
+	print(outSocket.status)
