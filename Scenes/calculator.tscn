@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://bl652firpy0tl"]
 
 [ext_resource type="FontFile" uid="uid://drk033dlm2rah" path="res://assets/fonts/upheavtt.ttf" id="1_n03va"]
@@ -8,6 +9,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bl652firpy0tl"]
 
 [ext_resource type="Texture2D" uid="uid://7q3y6ajtrt20" path="res://assets/sprites/grid-png.png" id="1_od6v5"]
+>>>>>>> Stashed changes
+=======
+[gd_scene format=3 uid="uid://cd0osnmegqnei"]
 >>>>>>> Stashed changes
 
 [node name="Calculator" type="Node2D"]

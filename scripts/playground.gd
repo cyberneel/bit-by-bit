@@ -1,14 +1,20 @@
 extends Node
 
 
-var inputs: int;
-var outputs: int;
-
+var inputs: int
+var outputs: int
+var inputPreset = preload("res://Scenes/presets/input.tscn")
+var input
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("" + str(inputs) + '->' + str(outputs));
+	print(str(inputs) + '->' + str(outputs))
+	input = inputPreset.instantiate()
+	add_child(input)
+	
+	
+	
 	
 
 
