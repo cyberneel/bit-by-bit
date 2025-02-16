@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://n6ijqwa77eiv"]
-
-[ext_resource type="Texture2D" uid="uid://dtboo3ey64jt3" path="res://new_compressed_texture_2d.tres" id="1_sh7hu"]
+[gd_scene format=3 uid="uid://bi134w35v8i34"]
 
 [node name="Challenge" type="Node2D"]
 
@@ -12,11 +10,10 @@ offset_bottom = 2529.0
 color = Color(0.0509804, 0.258824, 0.356863, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -599.0
-offset_top = -465.0
-offset_right = 2371.0
-offset_bottom = 2505.0
-texture = ExtResource("1_sh7hu")
+offset_left = -341.0
+offset_top = -461.0
+offset_right = 2629.0
+offset_bottom = 2509.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(574, 328)

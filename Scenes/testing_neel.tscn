@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxndfhg6bhjyk"]
+[gd_scene load_steps=4 format=3 uid="uid://cicu0g0nsiryb"]
 
-[ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
-[ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="3_klokk"]
 
 [node name="TestingNeel" type="Node2D"]
