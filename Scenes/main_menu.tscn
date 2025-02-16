@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch1ii2ee51yh2"]
+[gd_scene load_steps=6 format=3 uid="uid://ch1ii2ee51yh2"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_j3jly"]
 [ext_resource type="Texture2D" uid="uid://baffi3nj7viil" path="res://assets/sprites/mainbg.png" id="2_ifl7w"]
 [ext_resource type="FontFile" uid="uid://dsvw1bk8bauid" path="res://assets/fonts/Pixelme.ttf" id="4_3nmhh"]
 [ext_resource type="FontFile" uid="uid://q38cj2ciphdw" path="res://assets/fonts/Pixel Game.otf" id="4_nmtvh"]
+[ext_resource type="Script" path="res://Scenes/updown.gd" id="5_m3yon"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_j3jly")
@@ -42,6 +43,7 @@ offset_bottom = 272.0
 theme_override_fonts/font = ExtResource("4_nmtvh")
 theme_override_font_sizes/font_size = 140
 text = "BIT BY BIT"
+script = ExtResource("5_m3yon")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
