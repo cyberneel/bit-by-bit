@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bef828cufqn32"]
 
-[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+[ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 [ext_resource type="Script" path="res://scripts/playground.gd" id="1_p4k5u"]
 [ext_resource type="Script" path="res://scripts/playground_camera.gd" id="2_ny63l"]
 
