@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b1ebi35osknag"]
 
-[ext_resource type="Script" path="res://Scripts/levels/level5.gd" id="1_qtwbv"]
+[ext_resource type="Script" path="res://scripts/levels/level_gangsallhere.gd" id="1_tcfbf"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_1i1xr"]
 [ext_resource type="PackedScene" uid="uid://5jhlki8qc2fk" path="res://Scenes/presets/not_node.tscn" id="3_ss1uv"]
 [ext_resource type="PackedScene" uid="uid://dhrl06ead8vic" path="res://Scenes/presets/andNode.tscn" id="4_1dea5"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="14_pp0t8"]
 
 [node name="Node2D2" type="Node2D"]
-script = ExtResource("1_qtwbv")
+script = ExtResource("1_tcfbf")
 input = ExtResource("2_1i1xr")
 notGate = ExtResource("3_ss1uv")
 andGate = ExtResource("4_1dea5")
@@ -26,6 +26,7 @@ norGate = ExtResource("7_m5a4n")
 xorGate = ExtResource("8_0mnpf")
 xnorGate = ExtResource("9_xb6w5")
 output = ExtResource("10_7b1wc")
+Camera = ExtResource("11_ef6re")
 
 [node name="Camera2D" parent="." instance=ExtResource("11_ef6re")]
 
@@ -38,29 +39,12 @@ offset_bottom = 722.0
 scale = Vector2(1, 1.00596)
 color = Color(0.223103, 0.223103, 0.223103, 1)
 
-[node name="Input" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 7.95263
-offset_right = 176.0
-offset_bottom = 73.9526
-theme = ExtResource("12_6aijx")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/Input"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 15.0
-offset_right = 92.0
-offset_bottom = 38.0
-theme = ExtResource("12_6aijx")
-text = "Input"
-
 [node name="NOT" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 95.4314
-offset_right = 176.0
-offset_bottom = 161.431
+offset_left = 39.0
+offset_top = 21.8696
+offset_right = 175.0
+offset_bottom = 87.8692
 theme = ExtResource("12_6aijx")
 text = "
 "
@@ -76,10 +60,10 @@ horizontal_alignment = 1
 
 [node name="AND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 95.4313
-offset_right = 352.0
-offset_bottom = 161.431
+offset_left = 194.0
+offset_top = 92.449
+offset_right = 330.0
+offset_bottom = 158.449
 theme = ExtResource("12_6aijx")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/AND"]
@@ -93,10 +77,10 @@ horizontal_alignment = 1
 
 [node name="OR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 392.0
-offset_top = 95.4313
-offset_right = 528.0
-offset_bottom = 161.431
+offset_left = 343.0
+offset_top = 19.8815
+offset_right = 479.0
+offset_bottom = 85.8812
 theme = ExtResource("12_6aijx")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/OR"]
@@ -109,10 +93,10 @@ text = "OR"
 
 [node name="NAND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 95.4314
-offset_right = 704.0
-offset_bottom = 161.431
+offset_left = 499.0
+offset_top = 91.4549
+offset_right = 635.0
+offset_bottom = 157.455
 theme = ExtResource("12_6aijx")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NAND"]
@@ -125,10 +109,10 @@ text = "NAND"
 
 [node name="NOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 744.0
-offset_top = 95.4314
-offset_right = 880.0
-offset_bottom = 161.431
+offset_left = 648.0
+offset_top = 19.8815
+offset_right = 784.0
+offset_bottom = 85.8811
 theme = ExtResource("12_6aijx")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NOR"]
@@ -142,10 +126,10 @@ text = "NOR
 
 [node name="XOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 920.0
-offset_top = 95.4314
-offset_right = 1056.0
-offset_bottom = 161.431
+offset_left = 804.0
+offset_top = 92.449
+offset_right = 940.0
+offset_bottom = 158.449
 theme = ExtResource("12_6aijx")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/XOR"]
@@ -158,10 +142,10 @@ text = "XOR"
 
 [node name="XNOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 1096.0
-offset_top = 95.4314
-offset_right = 1232.0
-offset_bottom = 161.431
+offset_left = 950.0
+offset_top = 15.9052
+offset_right = 1086.0
+offset_bottom = 81.9048
 theme = ExtResource("12_6aijx")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/XNOR"]
@@ -172,22 +156,61 @@ offset_right = 90.0
 offset_bottom = 38.0
 text = "XNOR"
 
-[node name="Output" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+[node name="AND_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 216.0
-offset_top = 7.95259
-offset_right = 352.0
-offset_bottom = 73.9526
-theme = ExtResource("12_6aijx")
+offset_left = 339.0
+offset_top = 104.378
+offset_right = 378.0
+offset_bottom = 149.378
+placeholder_text = "x0"
 
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/Output"]
+[node name="OR_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 15.9053
-offset_right = 96.0
-offset_bottom = 38.9053
-text = "Output
-"
+offset_left = 491.0
+offset_top = 31.8104
+offset_right = 525.0
+offset_bottom = 74.8104
+placeholder_text = "x0"
+
+[node name="NOT_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 31.8104
+offset_right = 219.0
+offset_bottom = 76.8104
+placeholder_text = "x0"
+
+[node name="NAND_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
+offset_left = 643.0
+offset_top = 103.384
+offset_right = 679.0
+offset_bottom = 143.384
+placeholder_text = "x0"
+
+[node name="NOR_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
+offset_left = 795.0
+offset_top = 30.0
+offset_right = 832.0
+offset_bottom = 68.0
+placeholder_text = "x0"
+
+[node name="XOR_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
+offset_left = 951.0
+offset_top = 106.0
+offset_right = 985.0
+offset_bottom = 146.0
+placeholder_text = "x0"
+
+[node name="XNOR_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 27.8341
+offset_right = 1132.0
+offset_bottom = 66.8341
+placeholder_text = "x0"
 
 [node name="Button" type="Button" parent="Camera2D/CanvasLayer"]
 offset_right = 8.0
@@ -214,7 +237,29 @@ stretch_mode = 1
 
 [node name="Grapher" parent="." instance=ExtResource("14_pp0t8")]
 
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/Input" to="." method="_on_input_pressed"]
+[node name="Win" type="TextEdit" parent="."]
+offset_left = -193.0
+offset_top = 115.0
+offset_right = -65.0
+offset_bottom = 157.0
+scale = Vector2(3, 3)
+text = "Level Passed!"
+placeholder_text = "placeholder"
+
+[node name="Instructions" type="TextEdit" parent="."]
+offset_left = -287.0
+offset_top = -235.0
+offset_right = 281.0
+offset_bottom = -189.0
+text = "The gang's all here! Make sure you use each node to turn ON the bulb..."
+placeholder_text = "placeholder"
+
+[node name="output" parent="." instance=ExtResource("10_7b1wc")]
+position = Vector2(708, -1)
+
+[node name="Input" parent="." instance=ExtResource("2_1i1xr")]
+position = Vector2(-611, -2.38419e-07)
+
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOT" to="." method="_on_not_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/AND" to="." method="_on_and_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/OR" to="." method="_on_or_pressed"]
@@ -222,5 +267,4 @@ stretch_mode = 1
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOR" to="." method="_on_nor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XOR" to="." method="_on_xor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XNOR" to="." method="_on_xnor_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/Output" to="." method="_on_output_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="." method="_on_button_pressed"]
