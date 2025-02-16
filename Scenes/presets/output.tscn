@@ -1,52 +1,51 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0q70wnwsirm4"]
+[gd_scene load_steps=7 format=3 uid="uid://gkbcmdclx4jo"]
 
-[ext_resource type="Script" path="res://Scenes/presets/input.gd" id="1_ue4jp"]
-[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_8fx2w"]
-[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_brltk"]
-[ext_resource type="Script" path="res://scripts/socket.gd" id="4_xfqrx"]
+[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="1_s1tnc"]
+[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_khp3j"]
+[ext_resource type="Script" path="res://Scenes/presets/output.gd" id="3_wfymi"]
+[ext_resource type="Script" path="res://scripts/socket.gd" id="4_q3q11"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tnpoa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iqoa2"]
 
-[node name="Input" type="Node2D"]
+[node name="output" type="Node2D"]
+rotation = 3.14159
 scale = Vector2(6.14, 6.14)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.131379, 0.131379, 0.131379, 1)
 position = Vector2(12.8366, 0)
 scale = Vector2(0.0157288, 0.0158549)
-texture = ExtResource("2_brltk")
+texture = ExtResource("1_s1tnc")
 
 [node name="Main Input" type="Sprite2D" parent="."]
 modulate = Color(0.215902, 0.215902, 0.215902, 1)
 scale = Vector2(1.45953, 1.45953)
-texture = ExtResource("2_8fx2w")
+texture = ExtResource("2_khp3j")
 region_enabled = true
 region_rect = Rect2(19, 397, 14, 14)
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_ue4jp")
-onColor = null
-offColor = null
+script = ExtResource("3_wfymi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_tnpoa")
 
-[node name="outputs" type="Node2D" parent="."]
+[node name="inputs" type="Node2D" parent="."]
 
-[node name="socket 1" type="Area2D" parent="outputs"]
+[node name="socket 1" type="Area2D" parent="inputs"]
 position = Vector2(21.544, 0)
 scale = Vector2(0.661781, 0.661781)
-script = ExtResource("4_xfqrx")
+script = ExtResource("4_q3q11")
 
-[node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
+[node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
 scale = Vector2(1.51107, 1.51107)
-texture = ExtResource("2_8fx2w")
+texture = ExtResource("2_khp3j")
 region_enabled = true
 region_rect = Rect2(91, 91, 14, 14)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
 shape = SubResource("CircleShape2D_iqoa2")
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]

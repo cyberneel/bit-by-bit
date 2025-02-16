@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="3_klokk"]
 [ext_resource type="PackedScene" uid="uid://bg3vjijnoaxab" path="res://Scenes/presets/or_node.tscn" id="5_gceud"]
 [ext_resource type="PackedScene" uid="uid://bg8owe1hqq6o7" path="res://Scenes/presets/nand_node.tscn" id="6_fo75n"]
-[ext_resource type="PackedScene" uid="uid://gkbcmdclx4jo" path="res://Scenes/presets/output.tscn" id="8_2sddf"]
 [ext_resource type="PackedScene" uid="uid://dy6lfcbi5ni5s" path="res://Scenes/presets/xor_node.tscn" id="8_mv7py"]
+[ext_resource type="PackedScene" uid="uid://d0yqpbrnt4fox" path="res://Scenes/presets/output.tscn" id="11_n310h"]
 
 [node name="TestingNeel" type="Node2D"]
 
@@ -51,8 +51,6 @@ scale = Vector2(3.32971, 3.32971)
 position = Vector2(86, 293)
 scale = Vector2(3.32971, 3.32971)
 
-[node name="output" parent="." instance=ExtResource("8_2sddf")]
-
 [node name="OrNode" parent="." instance=ExtResource("5_gceud")]
 position = Vector2(642, 135)
 scale = Vector2(2.93464, 2.93464)
@@ -64,3 +62,6 @@ scale = Vector2(2.79858, 2.79858)
 [node name="XorNode" parent="." instance=ExtResource("8_mv7py")]
 position = Vector2(953, 114)
 scale = Vector2(2.73503, 2.73503)
+
+[node name="Input3" parent="." instance=ExtResource("11_n310h")]
+position = Vector2(-54, 417)
