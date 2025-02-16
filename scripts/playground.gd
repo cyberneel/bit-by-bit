@@ -77,7 +77,7 @@ func _on_output_pressed() -> void:
 
 	
 
-# Replace with function body.
+# Replace with function body.a
 
 
 func _on_button_pressed() -> void:
