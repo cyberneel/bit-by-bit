@@ -1,72 +1,74 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbshvmksc08og"]
+[gd_scene load_steps=8 format=3 uid="uid://cf1cq4vetwmig"]
 
-[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="1_2ucek"]
-[ext_resource type="Script" path="res://Scenes/presets/and_node.gd" id="1_x0j0m"]
-[ext_resource type="Script" path="res://scripts/socket.gd" id="2_a421n"]
-[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="2_dglb5"]
+[ext_resource type="Script" path="res://Scenes/presets/nand_node.gd" id="1_jlhtp"]
+[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_81p2d"]
+[ext_resource type="Script" path="res://scripts/socket.gd" id="3_x564h"]
+[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="4_g4duy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ue8um"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jt01e"]
 size = Vector2(44, 30)
 
-[node name="AndNode" type="Node2D"]
-script = ExtResource("1_x0j0m")
+[node name="NandNode" type="Node2D"]
+script = ExtResource("1_jlhtp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.077922, 0.0779221)
-texture = ExtResource("1_2ucek")
+texture = ExtResource("2_81p2d")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
 modulate = Color(0, 0, 0, 1)
-offset_left = -218.167
+offset_left = -308.0
 offset_top = -141.167
-offset_right = -168.167
+offset_right = -258.0
 offset_bottom = -115.167
 scale = Vector2(12.7721, 12.7721)
 size_flags_horizontal = 4
-text = "AND"
-tab_size = 24
+text = "NAND"
+tab_size = 20
 
 [node name="inputs" type="Node2D" parent="."]
 
 [node name="socket 1" type="Area2D" parent="inputs"]
 position = Vector2(-32, -7)
 scale = Vector2(0.661781, 0.661781)
-script = ExtResource("2_a421n")
+script = ExtResource("3_x564h")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
 modulate = Color(0.051971, 0.051971, 0.051971, 1)
 scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("2_dglb5")
+texture = ExtResource("4_g4duy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
-shape = SubResource("CircleShape2D_m0yrc")
+shape = SubResource("CircleShape2D_yhqml")
 
 [node name="socket 2" type="Area2D" parent="inputs"]
 position = Vector2(-32, 8)
 scale = Vector2(0.661781, 0.661781)
-script = ExtResource("2_a421n")
+script = ExtResource("3_x564h")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 2"]
 modulate = Color(0.051971, 0.051971, 0.051971, 1)
 scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("2_dglb5")
+texture = ExtResource("4_g4duy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 2"]
-shape = SubResource("CircleShape2D_m0yrc")
+shape = SubResource("CircleShape2D_yhqml")
 
 [node name="outputs" type="Node2D" parent="."]
 
 [node name="socket 1" type="Area2D" parent="outputs"]
 position = Vector2(30, 0)
 scale = Vector2(0.661781, 0.661781)
-script = ExtResource("2_a421n")
+script = ExtResource("3_x564h")
 
 [node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
 modulate = Color(0.051971, 0.051971, 0.051971, 1)
 scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("2_dglb5")
+texture = ExtResource("4_g4duy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")
@@ -74,4 +76,4 @@ shape = SubResource("CircleShape2D_m0yrc")
 [node name="MoveArea2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
-shape = SubResource("RectangleShape2D_ue8um")
+shape = SubResource("RectangleShape2D_jt01e")
