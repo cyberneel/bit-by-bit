@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxndfhg6bhjyk"]
 
 [ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
-[ext_resource type="Script" path="res://Scenes/grapher.gd" id="2_o1uvc"]
+[ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="3_klokk"]
 
 [node name="TestingNeel" type="Node2D"]
@@ -18,12 +18,7 @@ scale = Vector2(2.86671, 2.86671)
 position = Vector2(450, 395)
 scale = Vector2(2.86671, 2.86671)
 
-[node name="Grapher" type="Node2D" parent="."]
-script = ExtResource("2_o1uvc")
-
-[node name="RayCast2D" type="RayCast2D" parent="Grapher"]
-hit_from_inside = true
-collide_with_areas = true
+[node name="Grapher" parent="." instance=ExtResource("2_n636q")]
 
 [node name="Input" parent="." instance=ExtResource("3_klokk")]
 position = Vector2(86, 129)
