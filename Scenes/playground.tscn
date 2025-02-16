@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://bef828cufqn32"]
 
-[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+[ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 [ext_resource type="Script" path="res://scripts/playground.gd" id="1_p4k5u"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/not_node.tscn" id="2_kilk0"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/andNode.tscn" id="3_osoii"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/or_node.tscn" id="4_56cml"]
+[ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="2_kilk0"]
+[ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="3_osoii"]
+[ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="4_56cml"]
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="4_oct25"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/nand_node.tscn" id="5_blur0"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/nor_node.tscn" id="6_k7qe8"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/xor_node.tscn" id="7_hktnj"]
+[ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="5_blur0"]
+[ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="6_k7qe8"]
+[ext_resource type="PackedScene" uid="uid://beqm2xqbf64o0" path="res://Scenes/presets/xor_node.tscn" id="7_hktnj"]
 [ext_resource type="PackedScene" path="res://Scenes/presets/xnor_node.tscn" id="8_xme6e"]
 [ext_resource type="PackedScene" path="res://Scenes/presets/camera_2d.tscn" id="9_h4e6n"]
 
@@ -35,6 +35,7 @@ offset_bottom = 722.0
 color = Color(0.223103, 0.223103, 0.223103, 1)
 
 [node name="NOT" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 21.0
 offset_top = 25.0
 offset_right = 157.0
@@ -53,6 +54,7 @@ text = "NOT"
 horizontal_alignment = 1
 
 [node name="AND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 197.0
 offset_top = 25.0
 offset_right = 333.0
@@ -60,6 +62,7 @@ offset_bottom = 91.0
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/AND"]
+layout_mode = 0
 offset_left = 24.0
 offset_top = 16.0
 offset_right = 104.0
@@ -68,6 +71,7 @@ text = "AND"
 horizontal_alignment = 1
 
 [node name="OR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 373.0
 offset_top = 25.0
 offset_right = 509.0
@@ -75,6 +79,7 @@ offset_bottom = 91.0
 theme = ExtResource("4_oct25")
 
 [node name="NAND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 549.0
 offset_top = 25.0
 offset_right = 685.0
@@ -82,6 +87,7 @@ offset_bottom = 91.0
 theme = ExtResource("4_oct25")
 
 [node name="NOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 725.0
 offset_top = 25.0
 offset_right = 861.0
@@ -89,6 +95,7 @@ offset_bottom = 91.0
 theme = ExtResource("4_oct25")
 
 [node name="XOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 901.0
 offset_top = 25.0
 offset_right = 1037.0
@@ -96,6 +103,7 @@ offset_bottom = 91.0
 theme = ExtResource("4_oct25")
 
 [node name="XNOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+layout_mode = 0
 offset_left = 1077.0
 offset_top = 25.0
 offset_right = 1213.0
@@ -132,3 +140,4 @@ stretch_mode = 1
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOR" to="." method="_on_nor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XOR" to="." method="_on_xor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XNOR" to="." method="_on_xnor_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="." method="_on_button_pressed"]
