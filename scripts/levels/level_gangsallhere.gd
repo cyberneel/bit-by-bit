@@ -35,6 +35,7 @@ var inputPreset = preload("res://Scenes/presets/input.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioPlayer.play_music_level()
 	print(str(inputs) + '->' + str(outputs))
 	$Win.hide()
 	#input = inputPreset.instantiate()
