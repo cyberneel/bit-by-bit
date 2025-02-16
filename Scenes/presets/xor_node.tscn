@@ -1,34 +1,38 @@
-[gd_scene load_steps=8 format=3 uid="uid://beqm2xqbf64o0"]
+[gd_scene load_steps=8 format=3 uid="uid://dy6lfcbi5ni5s"]
 
 [ext_resource type="Script" path="res://Scenes/presets/xor_node.gd" id="1_1a3x8"]
-[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_h8g5w"]
+[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_ogjgh"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_11dfk"]
-[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="4_v1y7y"]
+[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_x1qwj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_mmh68"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qyri4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkd4q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nubxy"]
 size = Vector2(44, 30)
 
 [node name="XorNode" type="Node2D"]
 script = ExtResource("1_1a3x8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.077922, 0.0779221)
-texture = ExtResource("2_h8g5w")
+self_modulate = Color(0.682, 0.47, 1, 1)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_ogjgh")
+region_enabled = true
+region_rect = Rect2(247, 290, 26, 12)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 1)
-offset_left = -243.834
-offset_top = -141.167
-offset_right = -193.834
-offset_bottom = -115.167
-scale = Vector2(12.7721, 12.7721)
+offset_left = -4.00001
+offset_top = -4.4
+offset_right = 40.0
+offset_bottom = 19.6
+scale = Vector2(0.259698, 0.259698)
 size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("3_x1qwj")
 text = "XOR"
-tab_size = 20
+tab_size = 24
+metadata/_edit_use_anchors_ = true
 
 [node name="inputs" type="Node2D" parent="."]
 
@@ -38,12 +42,13 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_11dfk")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_v1y7y")
+scale = Vector2(1.39992, 1.39992)
+texture = ExtResource("2_ogjgh")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
-shape = SubResource("CircleShape2D_yhqml")
+shape = SubResource("CircleShape2D_mmh68")
 
 [node name="socket 2" type="Area2D" parent="inputs"]
 position = Vector2(-32, 8)
@@ -51,12 +56,13 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_11dfk")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 2"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_v1y7y")
+scale = Vector2(1.39992, 1.39992)
+texture = ExtResource("2_ogjgh")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 2"]
-shape = SubResource("CircleShape2D_yhqml")
+shape = SubResource("CircleShape2D_mmh68")
 
 [node name="outputs" type="Node2D" parent="."]
 
@@ -66,14 +72,16 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_11dfk")
 
 [node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_v1y7y")
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_ogjgh")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
-shape = SubResource("CircleShape2D_m0yrc")
+shape = SubResource("CircleShape2D_qyri4")
 
 [node name="MoveArea2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
-shape = SubResource("RectangleShape2D_dkd4q")
+visible = false
+shape = SubResource("RectangleShape2D_nubxy")

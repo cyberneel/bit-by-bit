@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://pb6ywh7fqf1r"]
+[gd_scene load_steps=8 format=3 uid="uid://bg3vjijnoaxab"]
 
 [ext_resource type="Script" path="res://Scenes/presets/or_node.gd" id="1_hyeyt"]
-[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_xhycy"]
+[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_2wuth"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_bhyxv"]
-[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="4_c0d3g"]
+[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_tub1q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
@@ -16,17 +16,20 @@ size = Vector2(44, 30)
 script = ExtResource("1_hyeyt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.077922, 0.0779221)
-texture = ExtResource("2_xhycy")
+self_modulate = Color(0, 0.733333, 1, 1)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_2wuth")
+region_enabled = true
+region_rect = Rect2(247, 290, 26, 12)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 1)
-offset_left = -218.167
-offset_top = -141.167
-offset_right = -168.167
-offset_bottom = -115.167
-scale = Vector2(12.7721, 12.7721)
+offset_left = -3.2
+offset_top = -4.4
+offset_right = 40.8
+offset_bottom = 19.6
+scale = Vector2(0.259698, 0.259698)
 size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("3_tub1q")
 text = "OR"
 tab_size = 24
 
@@ -38,9 +41,10 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_bhyxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_c0d3g")
+scale = Vector2(1.51107, 1.51107)
+texture = ExtResource("2_2wuth")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
 shape = SubResource("CircleShape2D_yhqml")
@@ -51,9 +55,10 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_bhyxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 2"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_c0d3g")
+scale = Vector2(1.51107, 1.51107)
+texture = ExtResource("2_2wuth")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 2"]
 shape = SubResource("CircleShape2D_yhqml")
@@ -66,9 +71,10 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_bhyxv")
 
 [node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_c0d3g")
+scale = Vector2(1.51107, 1.51107)
+texture = ExtResource("2_2wuth")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")

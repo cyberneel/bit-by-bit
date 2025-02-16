@@ -1,34 +1,38 @@
-[gd_scene load_steps=8 format=3 uid="uid://c81q218yxr71v"]
+[gd_scene load_steps=8 format=3 uid="uid://bh6ms58chuqda"]
 
 [ext_resource type="Script" path="res://Scenes/presets/xnor_node.gd" id="1_hnvgq"]
-[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_2dagd"]
+[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_021qc"]
+[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_ahcn4"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_mrh21"]
-[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="4_5s1e1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_8j73q"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m6h6e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7x22"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erryp"]
 size = Vector2(44, 30)
 
 [node name="XnorNode" type="Node2D"]
 script = ExtResource("1_hnvgq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.077922, 0.0779221)
-texture = ExtResource("2_2dagd")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+self_modulate = Color(0.682, 0.47, 1, 1)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_021qc")
+region_enabled = true
+region_rect = Rect2(247, 290, 26, 12)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 1)
-offset_left = -295.167
-offset_top = -141.167
-offset_right = -240.167
-offset_bottom = -115.167
-scale = Vector2(12.7721, 12.7721)
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D2"]
+offset_left = -4.00001
+offset_top = -4.4
+offset_right = 40.0
+offset_bottom = 19.6
+scale = Vector2(0.259698, 0.259698)
 size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("3_ahcn4")
 text = "XNOR"
-tab_size = 20
+tab_size = 24
+metadata/_edit_use_anchors_ = true
 
 [node name="inputs" type="Node2D" parent="."]
 
@@ -38,12 +42,13 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_mrh21")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_5s1e1")
+scale = Vector2(1.39992, 1.39992)
+texture = ExtResource("2_021qc")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
-shape = SubResource("CircleShape2D_yhqml")
+shape = SubResource("CircleShape2D_8j73q")
 
 [node name="socket 2" type="Area2D" parent="inputs"]
 position = Vector2(-32, 8)
@@ -51,12 +56,13 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_mrh21")
 
 [node name="Sprite2D" type="Sprite2D" parent="inputs/socket 2"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_5s1e1")
+scale = Vector2(1.39992, 1.39992)
+texture = ExtResource("2_021qc")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 2"]
-shape = SubResource("CircleShape2D_yhqml")
+shape = SubResource("CircleShape2D_8j73q")
 
 [node name="outputs" type="Node2D" parent="."]
 
@@ -66,14 +72,24 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("3_mrh21")
 
 [node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("4_5s1e1")
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_021qc")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
-shape = SubResource("CircleShape2D_m0yrc")
+shape = SubResource("CircleShape2D_m6h6e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 5)
+rotation = -1.5708
+scale = Vector2(0.627, 0.627)
+texture = ExtResource("2_021qc")
+region_enabled = true
+region_rect = Rect2(415, 129, 14, 10)
 
 [node name="MoveArea2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
-shape = SubResource("RectangleShape2D_a7x22")
+visible = false
+shape = SubResource("RectangleShape2D_erryp")

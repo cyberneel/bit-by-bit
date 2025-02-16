@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b0q70wnwsirm4"]
 
-[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="1_u5rr7"]
 [ext_resource type="Script" path="res://Scenes/presets/input.gd" id="1_ue4jp"]
+[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_8fx2w"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_brltk"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="4_xfqrx"]
 
@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_iqoa2"]
 
 [node name="Input" type="Node2D"]
-scale = Vector2(11.14, 11.14)
+scale = Vector2(6.14, 6.14)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.131379, 0.131379, 0.131379, 1)
@@ -20,8 +20,10 @@ texture = ExtResource("2_brltk")
 
 [node name="Main Input" type="Sprite2D" parent="."]
 modulate = Color(0.215902, 0.215902, 0.215902, 1)
-scale = Vector2(0.0797101, 0.0797101)
-texture = ExtResource("1_u5rr7")
+scale = Vector2(1.45953, 1.45953)
+texture = ExtResource("2_8fx2w")
+region_enabled = true
+region_rect = Rect2(19, 397, 14, 14)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_ue4jp")
@@ -37,9 +39,10 @@ scale = Vector2(0.661781, 0.661781)
 script = ExtResource("4_xfqrx")
 
 [node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
-modulate = Color(0.051971, 0.051971, 0.051971, 1)
-scale = Vector2(0.0701754, 0.0701754)
-texture = ExtResource("1_u5rr7")
+scale = Vector2(1.51107, 1.51107)
+texture = ExtResource("2_8fx2w")
+region_enabled = true
+region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_iqoa2")
