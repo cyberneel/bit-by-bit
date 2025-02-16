@@ -1,18 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://bef828cufqn32"]
+[gd_scene load_steps=15 format=3 uid="uid://bef828cufqn32"]
 
-[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+[ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 [ext_resource type="Script" path="res://scripts/playground.gd" id="1_p4k5u"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_cirrh"]
-[ext_resource type="PackedScene" uid="uid://5jhlki8qc2fk" path="res://Scenes/presets/not_node.tscn" id="2_kilk0"]
-[ext_resource type="PackedScene" uid="uid://dhrl06ead8vic" path="res://Scenes/presets/andNode.tscn" id="3_osoii"]
-[ext_resource type="PackedScene" uid="uid://bg3vjijnoaxab" path="res://Scenes/presets/or_node.tscn" id="4_56cml"]
+[ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="2_kilk0"]
+[ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="3_osoii"]
+[ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="4_56cml"]
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="4_oct25"]
-[ext_resource type="PackedScene" uid="uid://bg8owe1hqq6o7" path="res://Scenes/presets/nand_node.tscn" id="5_blur0"]
-[ext_resource type="PackedScene" uid="uid://cpmqkix8fbcgn" path="res://Scenes/presets/nor_node.tscn" id="6_k7qe8"]
-[ext_resource type="PackedScene" uid="uid://dy6lfcbi5ni5s" path="res://Scenes/presets/xor_node.tscn" id="7_hktnj"]
-[ext_resource type="PackedScene" uid="uid://bh6ms58chuqda" path="res://Scenes/presets/xnor_node.tscn" id="8_xme6e"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/camera_2d.tscn" id="9_h4e6n"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="13_xlbep"]
+[ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="5_blur0"]
+[ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="6_k7qe8"]
+[ext_resource type="PackedScene" uid="uid://beqm2xqbf64o0" path="res://Scenes/presets/xor_node.tscn" id="7_hktnj"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/xnor_node.tscn" id="8_xme6e"]
+[ext_resource type="PackedScene" uid="uid://uex5epijagq6" path="res://Scenes/presets/camera_2d.tscn" id="9_h4e6n"]
+[ext_resource type="PackedScene" uid="uid://gj0v3qorngjt" path="res://Scenes/presets/output.tscn" id="10_3g81d"]
+[ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="13_xlbep"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_p4k5u")
@@ -24,24 +25,25 @@ nandGate = ExtResource("5_blur0")
 norGate = ExtResource("6_k7qe8")
 xorGate = ExtResource("7_hktnj")
 xnorGate = ExtResource("8_xme6e")
+output = ExtResource("10_3g81d")
 
 [node name="Camera2D" parent="." instance=ExtResource("9_h4e6n")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
 [node name="Tool Bar" type="ColorRect" parent="Camera2D/CanvasLayer"]
-offset_left = 3.0
-offset_top = 599.0
-offset_right = 1279.0
+offset_top = 552.0
+offset_right = 1280.0
 offset_bottom = 722.0
+scale = Vector2(1, 1.00596)
 color = Color(0.223103, 0.223103, 0.223103, 1)
 
 [node name="Input" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 38.0
-offset_top = 26.0
-offset_right = 174.0
-offset_bottom = 92.0
+offset_left = 40.0
+offset_top = 7.95263
+offset_right = 176.0
+offset_bottom = 73.9526
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/Input"]
@@ -55,10 +57,10 @@ text = "Input"
 
 [node name="NOT" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 192.0
-offset_top = 27.0
-offset_right = 328.0
-offset_bottom = 93.0
+offset_left = 40.0
+offset_top = 95.4314
+offset_right = 176.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 text = "
 "
@@ -74,27 +76,27 @@ horizontal_alignment = 1
 
 [node name="AND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 347.0
-offset_top = 29.0
-offset_right = 483.0
-offset_bottom = 95.0
+offset_left = 216.0
+offset_top = 95.4313
+offset_right = 352.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/AND"]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 16.0
+offset_top = 15.9052
 offset_right = 104.0
-offset_bottom = 48.0
+offset_bottom = 47.9052
 text = "AND"
 horizontal_alignment = 1
 
 [node name="OR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 496.0
-offset_top = 28.0
-offset_right = 632.0
-offset_bottom = 94.0
+offset_left = 392.0
+offset_top = 95.4313
+offset_right = 528.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/OR"]
@@ -107,10 +109,10 @@ text = "OR"
 
 [node name="NAND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 649.0
-offset_top = 26.0
-offset_right = 785.0
-offset_bottom = 92.0
+offset_left = 568.0
+offset_top = 95.4314
+offset_right = 704.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NAND"]
@@ -123,10 +125,10 @@ text = "NAND"
 
 [node name="NOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 804.0
-offset_top = 27.0
-offset_right = 940.0
-offset_bottom = 93.0
+offset_left = 744.0
+offset_top = 95.4314
+offset_right = 880.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NOR"]
@@ -140,10 +142,10 @@ text = "NOR
 
 [node name="XOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 958.0
-offset_top = 27.0
-offset_right = 1094.0
-offset_bottom = 93.0
+offset_left = 920.0
+offset_top = 95.4314
+offset_right = 1056.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/XOR"]
@@ -156,10 +158,10 @@ text = "XOR"
 
 [node name="XNOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 1115.0
-offset_top = 27.0
-offset_right = 1251.0
-offset_bottom = 93.0
+offset_left = 1096.0
+offset_top = 95.4314
+offset_right = 1232.0
+offset_bottom = 161.431
 theme = ExtResource("4_oct25")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/XNOR"]
@@ -169,6 +171,22 @@ offset_top = 15.0
 offset_right = 90.0
 offset_bottom = 38.0
 text = "XNOR"
+
+[node name="Output" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+offset_left = 216.0
+offset_top = 7.95259
+offset_right = 352.0
+offset_bottom = 73.9526
+theme = ExtResource("4_oct25")
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/Output"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 15.9053
+offset_right = 96.0
+offset_bottom = 38.9053
+text = "Output
+"
 
 [node name="Button" type="Button" parent="Camera2D/CanvasLayer"]
 offset_right = 8.0
@@ -203,4 +221,5 @@ stretch_mode = 1
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOR" to="." method="_on_nor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XOR" to="." method="_on_xor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XNOR" to="." method="_on_xnor_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/Output" to="." method="_on_output_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="." method="_on_button_pressed"]
