@@ -1,5 +1,7 @@
 extends Node
 
+const AND_nodes = 1
+var AND_nodes_placed = 0
 
 var inputs: int
 var outputs: int
@@ -21,6 +23,7 @@ var inputPreset = preload("res://Scenes/presets/input.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(str(inputs) + '->' + str(outputs))
+	$Win.hide()
 	#input = inputPreset.instantiate()
 	#add_child(input)
 
@@ -29,7 +32,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$"Camera2D/CanvasLayer/Tool Bar/AND_Counter".text = "x" + str(AND_nodes - AND_nodes_placed)
+	if($output.get_child(3).get_child(0).status and AND_nodes - AND_nodes_placed == 0 and $Input.get_child(3).get_child(0).status and $Grapher.connections.size() >= 3):
+		$Win.show()
+	else:
+		$Win.hide()
 	pass
+
 func _on_input_pressed() -> void:
 	var inputInstance = input.instantiate()
 	inputInstance.position = get_node("Camera2D").position
@@ -40,10 +49,15 @@ func _on_not_pressed() -> void:
 	notInstance.position = get_node("Camera2D").position
 	add_child(notInstance)
 func _on_and_pressed() -> void:
-	var andInstance = andGate.instantiate()
-	andInstance.scale *= 2
-	andInstance.position = get_node("Camera2D").position
-	add_child(andInstance)
+	if(AND_nodes_placed >= AND_nodes):
+		pass
+	else:
+		var andInstance = andGate.instantiate()
+		andInstance.scale *= 2
+		andInstance.position = get_node("Camera2D").position
+		add_child(andInstance)
+		AND_nodes_placed += 1
+		
 func _on_or_pressed() -> void:
 	var orInstance = orGate.instantiate()
 	orInstance.scale *= 2

@@ -2,8 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://drk033dlm2rah" path="res://assets/fonts/upheavtt.ttf" id="1_iwjah"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_j3jly"]
-[ext_resource type="Texture2D" uid="uid://bmayf3vkv1i2c" path="res://assets/sprites/mainbg.png" id="2_ifl7w"]
-[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="4_3nmhh"]
+[ext_resource type="Texture2D" uid="uid://dggu1l52yn8i7" path="res://assets/sprites/mainbg.png" id="2_ifl7w"]
+[ext_resource type="FontFile" uid="uid://0ikk8l64boqr" path="res://assets/fonts/Pixelme.ttf" id="4_3nmhh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n0arg"]
 font = ExtResource("4_3nmhh")

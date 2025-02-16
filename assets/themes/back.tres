@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=17 format=4 uid="uid://52e06p43e7jw"]
+[gd_resource type="Theme" load_steps=17 format=4 uid="uid://ccw2bv5ewbg67"]
 
-[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="1_5wl0v"]
+[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="1_5wl0v"]
 
 [sub_resource type="Image" id="Image_miwsj"]
 data = {
