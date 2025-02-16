@@ -19,7 +19,7 @@ func _input(event):
 
 # Handle socket selection and connection
 func handle_socket_click(socket):
-	if selected_socket == null or selected_socket.get_parent().get_parent() == socket.get_parent().get_parent() or selected_socket.get_parent().name == socket.get_parent().name:
+	if selected_socket == null or (selected_socket.get_parent().get_parent() == socket.get_parent().get_parent() and selected_socket != socket) or (selected_socket.get_parent().name == socket.get_parent().name and selected_socket != socket):
 		selected_socket = socket  # First socket selected
 	elif selected_socket != socket:  # Second click (ensure different socket)
 		var new_connection = [selected_socket, socket]
@@ -29,6 +29,19 @@ func handle_socket_click(socket):
 		else:
 			create_connection(selected_socket, socket)
 		
+		selected_socket = null  # Reset selection
+	elif selected_socket == socket:
+		print("del")
+		# If the same socket is clicked again, remove all connections involving this socket
+		for connection in connections:
+			if socket in connection:
+				for soc in connection:
+					if soc.get_parent().name == "inputs":
+						soc.inSoc = null
+						soc.status = false
+				connections.erase(connection)
+			
+		queue_redraw()
 		selected_socket = null  # Reset selection
 
 # Create and store the connection
