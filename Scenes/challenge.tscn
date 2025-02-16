@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi134w35v8i34"]
+[gd_scene load_steps=2 format=3 uid="uid://n6ijqwa77eiv"]
 
 [ext_resource type="Script" path="res://Scripts/challenge.gd" id="1_dqjnt"]
 
@@ -28,5 +28,7 @@ offset_right = -448.0
 offset_bottom = -321.0
 scale = Vector2(1.45369, 2.59979)
 text = "Back to Challenge Menu <---"
+
+[node name="PopupPanel" type="PopupPanel" parent="Camera2D"]
 
 [connection signal="pressed" from="Camera2D/Button" to="." method="_on_button_pressed"]
