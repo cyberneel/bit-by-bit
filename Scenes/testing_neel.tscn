@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=3 uid="uid://dxndfhg6bhjyk"]
 
 [ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="1_damvq"]
@@ -5,6 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="1_qnt7g"]
 [ext_resource type="PackedScene" uid="uid://c81q218yxr71v" path="res://Scenes/presets/xnor_node.tscn" id="1_voy4d"]
 [ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://dqthol2m1pgem"]
+
+[ext_resource type="PackedScene" uid="uid://75256y8qkxql" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="3_klokk"]
 [ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="5_gceud"]
 [ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="6_fo75n"]
@@ -29,7 +36,7 @@ position = Vector2(850, 258)
 scale = Vector2(2.86671, 2.86671)
 
 [node name="AndNode3" parent="." instance=ExtResource("1_pwmqr")]
-position = Vector2(450, 258)
+position = Vector2(499, 197)
 scale = Vector2(2.86671, 2.86671)
 
 [node name="AndNode4" parent="." instance=ExtResource("1_pwmqr")]
