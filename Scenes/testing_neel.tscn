@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxndfhg6bhjyk"]
+[gd_scene load_steps=8 format=3 uid="uid://dxndfhg6bhjyk"]
 
+[ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="1_damvq"]
 [ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
 [ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="1_qnt7g"]
 [ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
@@ -8,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="6_fo75n"]
 
 [node name="TestingNeel" type="Node2D"]
+
+[node name="NorNode" parent="." instance=ExtResource("1_damvq")]
+position = Vector2(784, 578)
+scale = Vector2(3.2708, 3.2708)
 
 [node name="NotNode" parent="." instance=ExtResource("1_qnt7g")]
 position = Vector2(814, 441)
