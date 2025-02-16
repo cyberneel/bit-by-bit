@@ -1,10 +1,13 @@
+
 extends Node2D
+
 
 @export var selected_socket = null  # Store first clicked socket
 @export var connections = []  # Stores (from_socket, to_socket) pairs
 
-func _ready():
+func _ready()->void:
 	$RayCast2D.enabled = true
+	
 
 func _input(event):
 	if event.is_action_pressed("click"):
@@ -59,4 +62,10 @@ func _draw():
 	for connection in connections:
 		var start_pos = connection[0].global_position
 		var end_pos = connection[1].global_position
+		#add_child(Line2D.new())
+		#var line: Line2D = get_child(get_child_count()-1)
+		#var vector = Vector2(start_pos.x,start_pos.y)
+		#var endVector = Vector2(end_pos.x, end_pos.y)
+		#line.points.push_back(vector)
+		#line.points.push_back(endVector)
 		draw_line(start_pos, end_pos, Color.BLACK, 15)  # Draw black connection line

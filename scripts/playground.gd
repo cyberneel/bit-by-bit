@@ -5,6 +5,7 @@ var inputs: int
 var outputs: int
 var inputPreset = preload("res://Scenes/presets/input.tscn")
 
+@export var input: Resource
 @export var notGate: Resource
 @export var andGate: Resource
 @export var orGate: Resource
@@ -28,7 +29,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
+func _on_input_pressed() -> void:
+	var inputInstance = input.instantiate()
+	inputInstance.position = get_node("Camera2D").position
+	add_child(inputInstance)
 func _on_not_pressed() -> void:
 	var notInstance = notGate.instantiate()
 	add_child(notInstance)
