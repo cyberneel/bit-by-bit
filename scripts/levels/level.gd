@@ -37,6 +37,8 @@ func _process(delta: float) -> void:
 	$"Camera2D/CanvasLayer/Tool Bar/NOT_Counter".text = "x" + str(NOT_nodes - NOT_nodes_placed)
 	if((not $output.get_child(3).get_child(0).status) and NOT_nodes - NOT_nodes_placed == 0 and $Input.get_child(3).get_child(0).status and $Grapher.connections.size() >= 2):
 		$Win.show()
+	else:
+		$Win.hide()
 	pass
 
 
