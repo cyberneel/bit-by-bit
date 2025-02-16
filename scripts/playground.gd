@@ -13,6 +13,7 @@ var inputPreset = preload("res://Scenes/presets/input.tscn")
 @export var norGate: Resource
 @export var xorGate: Resource
 @export var xnorGate: Resource
+@export var output: Resource
 @export var Camera: Resource
 
 
@@ -68,10 +69,15 @@ func _on_xnor_pressed() -> void:
 	xnorInstance.scale *= 2
 	xnorInstance.position = get_node("Camera2D").position
 	add_child(xnorInstance)
+func _on_output_pressed() -> void:
+	var outputInstance = output.instantiate()
+	outputInstance.position = get_node("Camera2D").position
+	add_child(outputInstance)
+
 
 	
 
-# Replace with function body.
+# Replace with function body.a
 
 
 func _on_button_pressed() -> void:
