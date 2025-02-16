@@ -22,11 +22,7 @@ func _on_button_2_pressed() -> void:
 
 
 func _on_button_3_pressed() -> void:
-<<<<<<< Updated upstream
 	get_tree().change_scene_to_file("res://Scenes/challenge_menu.tscn")
-=======
-	get_tree().change_scene_to_file("res://Scenes/testing_kevin.tscn")
->>>>>>> Stashed changes
 	pass # Replace with function body.
 
 
