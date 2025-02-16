@@ -1,5 +1,8 @@
 extends Node
 
+const OR_nodes = 1
+var OR_nodes_placed = 0
+
 
 var inputs: int
 var outputs: int
@@ -21,6 +24,7 @@ var inputPreset = preload("res://Scenes/presets/input.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(str(inputs) + '->' + str(outputs))
+	$Win.hide()
 	#input = inputPreset.instantiate()
 	#add_child(input)
 
@@ -29,7 +33,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$"Camera2D/CanvasLayer/Tool Bar/OR_Counter".text = "x" + str(OR_nodes - OR_nodes_placed)
+	if($output.get_child(3).get_child(0).status and OR_nodes - OR_nodes_placed == 0 and ($Input.get_child(3).get_child(0).status or $Input2.get_child(3).get_child(0).status) and $Grapher.connections.size() >= 3):
+		$Win.show()
+	else:
+		$Win.hide()
 	pass
+
+
 func _on_input_pressed() -> void:
 	var inputInstance = input.instantiate()
 	inputInstance.position = get_node("Camera2D").position
@@ -45,10 +56,15 @@ func _on_and_pressed() -> void:
 	andInstance.position = get_node("Camera2D").position
 	add_child(andInstance)
 func _on_or_pressed() -> void:
-	var orInstance = orGate.instantiate()
-	orInstance.scale *= 2
-	orInstance.position = get_node("Camera2D").position
-	add_child(orInstance)
+	if(OR_nodes_placed >= OR_nodes):
+		pass
+	else:
+		var orInstance = orGate.instantiate()
+		orInstance.scale *= 2
+		orInstance.position = get_node("Camera2D").position
+		add_child(orInstance)
+		OR_nodes_placed += 1
+		
 func _on_nand_pressed() -> void:
 	var nandInstance = nandGate.instantiate()
 	nandInstance.scale *= 2
