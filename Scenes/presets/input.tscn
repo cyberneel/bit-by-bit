@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/presets/inputMove.gd" id="1_qn1xb"]
 [ext_resource type="Script" path="res://Scenes/presets/input.gd" id="1_ue4jp"]
-[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_8fx2w"]
+[ext_resource type="Texture2D" uid="uid://d738hpq0w3ly" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_8fx2w"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_brltk"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="4_xfqrx"]
 
@@ -14,7 +14,7 @@
 size = Vector2(5.89577, 6.30293)
 
 [node name="Input" type="Area2D"]
-scale = Vector2(6.14, 6.14)
+scale = Vector2(3.07, 3.07)
 script = ExtResource("1_qn1xb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
