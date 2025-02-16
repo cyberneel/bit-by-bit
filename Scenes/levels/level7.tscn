@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=15 format=3 uid="uid://bti1xdo0441we"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://cwbpikjubqw6g"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://scripts/levels/level7.gd" id="1_1ojdm"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_b57k7"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="3_tuh7v"]
 [ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="4_p1gjo"]
 [ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="5_k4u8t"]
@@ -14,6 +19,20 @@
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="12_2hsjt"]
 [ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="13_2aaaq"]
 [ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="14_onnqq"]
+=======
+[ext_resource type="PackedScene" uid="uid://5jhlki8qc2fk" path="res://Scenes/presets/not_node.tscn" id="3_tuh7v"]
+[ext_resource type="PackedScene" uid="uid://dhrl06ead8vic" path="res://Scenes/presets/andNode.tscn" id="4_p1gjo"]
+[ext_resource type="PackedScene" uid="uid://bg3vjijnoaxab" path="res://Scenes/presets/or_node.tscn" id="5_k4u8t"]
+[ext_resource type="PackedScene" uid="uid://bg8owe1hqq6o7" path="res://Scenes/presets/nand_node.tscn" id="6_ljx53"]
+[ext_resource type="PackedScene" uid="uid://cpmqkix8fbcgn" path="res://Scenes/presets/nor_node.tscn" id="7_8u6p5"]
+[ext_resource type="PackedScene" uid="uid://dy6lfcbi5ni5s" path="res://Scenes/presets/xor_node.tscn" id="8_6aqxl"]
+[ext_resource type="PackedScene" uid="uid://bh6ms58chuqda" path="res://Scenes/presets/xnor_node.tscn" id="9_2jpqh"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/output.tscn" id="10_s4cja"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/camera_2d.tscn" id="11_h78b3"]
+[ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="12_2hsjt"]
+[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="13_2aaaq"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="14_onnqq"]
+>>>>>>> Stashed changes
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_1ojdm")
