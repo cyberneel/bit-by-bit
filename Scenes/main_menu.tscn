@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch1ii2ee51yh2"]
+[gd_scene load_steps=3 format=3 uid="uid://et1u4h28hv2a"]
 
 [ext_resource type="FontFile" uid="uid://drk033dlm2rah" path="res://assets/fonts/upheavtt.ttf" id="1_iwjah"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_j3jly"]
@@ -13,7 +13,7 @@ offset_top = -46.0
 offset_right = 1193.0
 offset_bottom = 689.0
 rotation = 0.00191483
-color = Color(0.0219014, 0.217932, 0.364542, 1)
+color = Color(0.0509804, 0.258824, 0.356863, 1)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 333.0
