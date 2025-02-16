@@ -1,7 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://bef828cufqn32"]
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://7q3y6ajtrt20" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+=======
+[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+>>>>>>> Stashed changes
 =======
 [ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 >>>>>>> Stashed changes

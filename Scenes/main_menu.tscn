@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_j3jly"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://baffi3nj7viil" path="res://assets/sprites/mainbg.png" id="2_ifl7w"]
 [ext_resource type="FontFile" uid="uid://dsvw1bk8bauid" path="res://assets/fonts/Pixelme.ttf" id="4_3nmhh"]
 [ext_resource type="FontFile" uid="uid://q38cj2ciphdw" path="res://assets/fonts/Pixel Game.otf" id="4_nmtvh"]
 [ext_resource type="Script" path="res://Scenes/updown.gd" id="5_m3yon"]
 =======
+=======
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://bmayf3vkv1i2c" path="res://assets/sprites/mainbg.png" id="2_ifl7w"]
 [ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="4_3nmhh"]
 
