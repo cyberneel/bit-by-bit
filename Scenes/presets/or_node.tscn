@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg3vjijnoaxab"]
+[gd_scene load_steps=9 format=3 uid="uid://pb6ywh7fqf1r"]
 
 [ext_resource type="Script" path="res://Scenes/presets/or_node.gd" id="1_hyeyt"]
-[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_2wuth"]
+[ext_resource type="Texture2D" uid="uid://0qlqvbihstqk" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_2wuth"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_bhyxv"]
-[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_tub1q"]
+[ext_resource type="FontFile" uid="uid://bi758aft6205y" path="res://assets/fonts/Pixelme.ttf" id="3_tub1q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
@@ -12,7 +12,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gaeha"]
 size = Vector2(44, 30)
 
-[node name="OrNode" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juyho"]
+size = Vector2(40, 32)
+
+[node name="OrNode" type="Area2D"]
 script = ExtResource("1_hyeyt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -29,6 +32,7 @@ offset_right = 40.8
 offset_bottom = 19.6
 scale = Vector2(0.259698, 0.259698)
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_tub1q")
 text = "OR"
 tab_size = 24
@@ -83,3 +87,9 @@ shape = SubResource("CircleShape2D_m0yrc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
 shape = SubResource("RectangleShape2D_gaeha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_juyho")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

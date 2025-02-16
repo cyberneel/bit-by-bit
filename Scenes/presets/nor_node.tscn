@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpmqkix8fbcgn"]
+[gd_scene load_steps=9 format=3 uid="uid://ds0vq04w8x717"]
 
 [ext_resource type="Script" path="res://Scenes/presets/nor_node.gd" id="1_v83rp"]
-[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_b6ut3"]
+[ext_resource type="FontFile" uid="uid://bi758aft6205y" path="res://assets/fonts/Pixelme.ttf" id="3_b6ut3"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_kvnex"]
-[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="4_qaoyc"]
+[ext_resource type="Texture2D" uid="uid://0qlqvbihstqk" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="4_qaoyc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
@@ -12,7 +12,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl3se"]
 size = Vector2(44, 30)
 
-[node name="NorNode" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljbqo"]
+size = Vector2(40, 32)
+
+[node name="NorNode" type="Area2D"]
 script = ExtResource("1_v83rp")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
@@ -29,6 +32,7 @@ offset_right = 40.0
 offset_bottom = 19.6
 scale = Vector2(0.259698, 0.259698)
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_b6ut3")
 text = "NOR"
 tab_size = 24
@@ -93,3 +97,9 @@ region_rect = Rect2(415, 129, 14, 10)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
 visible = false
 shape = SubResource("RectangleShape2D_tl3se")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ljbqo")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

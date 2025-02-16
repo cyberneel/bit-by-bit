@@ -1,16 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhrl06ead8vic"]
+[gd_scene load_steps=8 format=3 uid="uid://cpfpjynxr580x"]
 
 [ext_resource type="Script" path="res://Scenes/presets/and_node.gd" id="1_x0j0m"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="2_a421n"]
-[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_vv276"]
-[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_nygy3"]
+[ext_resource type="Texture2D" uid="uid://0qlqvbihstqk" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_vv276"]
+[ext_resource type="FontFile" uid="uid://bi758aft6205y" path="res://assets/fonts/Pixelme.ttf" id="3_nygy3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ue8um"]
 size = Vector2(44, 30)
 
-[node name="AndNode" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmjie"]
+size = Vector2(40, 32)
+
+[node name="AndNode" type="Area2D"]
 script = ExtResource("1_x0j0m")
 
 [node name="inputs" type="Node2D" parent="."]
@@ -29,6 +32,7 @@ offset_right = 46.25
 offset_bottom = 21.5
 scale = Vector2(0.279, 0.279)
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_nygy3")
 text = "AND"
 tab_size = 24
@@ -81,3 +85,9 @@ shape = SubResource("CircleShape2D_m0yrc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
 shape = SubResource("RectangleShape2D_ue8um")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pmjie")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

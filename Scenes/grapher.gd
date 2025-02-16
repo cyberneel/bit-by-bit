@@ -56,6 +56,9 @@ func create_connection(socket_from, socket_to):
 		connections.append([socket_to, socket_from])
 		socket_from.inSoc = socket_to
 	queue_redraw()  # Update the visuals
+	
+func _process(delta: float) -> void:
+	queue_redraw()
 
 # Draw connections between sockets
 func _draw():

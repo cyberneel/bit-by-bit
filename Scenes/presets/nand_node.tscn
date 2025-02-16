@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg8owe1hqq6o7"]
+[gd_scene load_steps=9 format=3 uid="uid://cf1cq4vetwmig"]
 
 [ext_resource type="Script" path="res://Scenes/presets/nand_node.gd" id="1_jlhtp"]
-[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_el6hi"]
+[ext_resource type="Texture2D" uid="uid://0qlqvbihstqk" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_el6hi"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_x564h"]
-[ext_resource type="FontFile" uid="uid://0ikk8l64boqr" path="res://assets/fonts/Pixelme.ttf" id="3_ytgoc"]
+[ext_resource type="FontFile" uid="uid://bi758aft6205y" path="res://assets/fonts/Pixelme.ttf" id="3_ytgoc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
@@ -12,7 +12,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jt01e"]
 size = Vector2(44, 30)
 
-[node name="NandNode" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7t6kx"]
+size = Vector2(40, 32)
+
+[node name="NandNode" type="Area2D"]
 script = ExtResource("1_jlhtp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -29,6 +32,7 @@ offset_right = 44.75
 offset_bottom = 21.5
 scale = Vector2(0.279, 0.279)
 size_flags_horizontal = 4
+mouse_filter = 2
 theme_override_fonts/normal_font = ExtResource("3_ytgoc")
 text = "NAND"
 tab_size = 24
@@ -92,3 +96,9 @@ visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
 shape = SubResource("RectangleShape2D_jt01e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7t6kx")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
