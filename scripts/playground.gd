@@ -35,24 +35,31 @@ func _on_input_pressed() -> void:
 	add_child(inputInstance)
 func _on_not_pressed() -> void:
 	var notInstance = notGate.instantiate()
+	notInstance.position = get_node("Camera2D").position
 	add_child(notInstance)
 func _on_and_pressed() -> void:
 	var andInstance = andGate.instantiate()
+	andInstance.position = get_node("Camera2D").position
 	add_child(andInstance)
 func _on_or_pressed() -> void:
 	var orInstance = orGate.instantiate()
+	orInstance.position = get_node("Camera2D").position
 	add_child(orInstance)
 func _on_nand_pressed() -> void:
 	var nandInstance = nandGate.instantiate()
+	nandInstance.position = get_node("Camera2D").position
 	add_child(nandInstance)
 func _on_nor_pressed() -> void:
 	var norInstance = norGate.instantiate()
+	norInstance.position = get_node("Camera2D").position
 	add_child(norInstance)
 func _on_xor_pressed() -> void:
 	var xorInstance = xorGate.instantiate()
+	xorInstance.position = get_node("Camera2D").position
 	add_child(xorInstance)
 func _on_xnor_pressed() -> void:
 	var xnorInstance = xnorGate.instantiate()
+	xnorInstance.position = get_node("Camera2D").position
 	add_child(xnorInstance)
 
 	
