@@ -1,7 +1,7 @@
 extends Node
 
-const NOR_nodes = 1
-var NOR_nodes_placed = 0
+const XNOR_nodes = 1
+var XNOR_nodes_placed = 0
 
 var inputs: int
 var outputs: int
@@ -32,8 +32,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$"Camera2D/CanvasLayer/Tool Bar/NOR_Counter".text = "x" + str(NOR_nodes - NOR_nodes_placed)
-	if($output.get_child(3).get_child(0).status and NOR_nodes - NOR_nodes_placed == 0 and (not $Input.get_child(3).get_child(0).status and not $Input2.get_child(3).get_child(0).status) and $Grapher.connections.size() >= 3):
+	$"Camera2D/CanvasLayer/Tool Bar/XNOR_Counter".text = "x" + str(XNOR_nodes - XNOR_nodes_placed)
+	if($output.get_child(3).get_child(0).status and XNOR_nodes - XNOR_nodes_placed == 0 and ((not $Input.get_child(3).get_child(0).status and not $Input2.get_child(3).get_child(0).status) or ($Input.get_child(3).get_child(0).status and $Input2.get_child(3).get_child(0).status)) and $Grapher.connections.size() >= 3):
 		$Win.show()
 	else:
 		$Win.hide()
@@ -64,14 +64,11 @@ func _on_nand_pressed() -> void:
 	nandInstance.position = get_node("Camera2D").position
 	add_child(nandInstance)
 func _on_nor_pressed() -> void:
-	if(NOR_nodes_placed >= NOR_nodes):
-		pass
-	else:
-		var norInstance = norGate.instantiate()
-		norInstance.scale *= 2
-		norInstance.position = get_node("Camera2D").position
-		add_child(norInstance)
-		NOR_nodes_placed += 1
+	var norInstance = norGate.instantiate()
+	norInstance.scale *= 2
+	norInstance.position = get_node("Camera2D").position
+	add_child(norInstance)
+		
 		
 func _on_xor_pressed() -> void:
 	var xorInstance = xorGate.instantiate()
@@ -79,10 +76,14 @@ func _on_xor_pressed() -> void:
 	xorInstance.position = get_node("Camera2D").position
 	add_child(xorInstance)
 func _on_xnor_pressed() -> void:
-	var xnorInstance = xnorGate.instantiate()
-	xnorInstance.scale *= 2
-	xnorInstance.position = get_node("Camera2D").position
-	add_child(xnorInstance)
+	if(XNOR_nodes_placed >= XNOR_nodes):
+		pass
+	else:
+		var xnorInstance = xnorGate.instantiate()
+		xnorInstance.scale *= 2
+		xnorInstance.position = get_node("Camera2D").position
+		add_child(xnorInstance)
+		XNOR_nodes_placed += 1
 func _on_output_pressed() -> void:
 	var outputInstance = output.instantiate()
 	outputInstance.position = get_node("Camera2D").position

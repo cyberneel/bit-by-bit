@@ -33,7 +33,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$"Camera2D/CanvasLayer/Tool Bar/XOR_Counter".text = "x" + str(XOR_nodes - XOR_nodes_placed)
-	if($output.get_child(3).get_child(0).status and XOR_nodes - XOR_nodes_placed == 0 and (not $Input.get_child(3).get_child(0).status and not $Input2.get_child(3).get_child(0).status) and $Grapher.connections.size() >= 3):
+	if($output.get_child(3).get_child(0).status and XOR_nodes - XOR_nodes_placed == 0 and (($Input.get_child(3).get_child(0).status and not $Input2.get_child(3).get_child(0).status) or(not $Input.get_child(3).get_child(0).status and $Input2.get_child(3).get_child(0).status)) and $Grapher.connections.size() >= 3):
 		$Win.show()
 	else:
 		$Win.hide()
