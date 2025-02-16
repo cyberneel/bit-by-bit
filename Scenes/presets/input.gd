@@ -5,12 +5,13 @@ class_name InputBit
 @export_category("Input Bit")
 @export var onColor: Color = Color.FIREBRICK
 @export var offColor: Color = Color.DIM_GRAY
-@export var outSocket: Socket = Socket.new()
+@export var outSocket: Socket
 
 var mouseHover: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	outSocket = get_parent().get_child(3).get_child(0)
 	pass # Replace with funghction body.
 
 func _input(event: InputEvent) -> void:

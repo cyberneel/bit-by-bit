@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0q70wnwsirm4"]
+[gd_scene load_steps=7 format=3 uid="uid://b0q70wnwsirm4"]
 
 [ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="1_u5rr7"]
 [ext_resource type="Script" path="res://Scenes/presets/input.gd" id="1_ue4jp"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_brltk"]
+[ext_resource type="Script" path="res://scripts/socket.gd" id="4_xfqrx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tnpoa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iqoa2"]
 
 [node name="Input" type="Node2D"]
 scale = Vector2(11.14, 11.14)
@@ -20,17 +23,26 @@ modulate = Color(0.215902, 0.215902, 0.215902, 1)
 scale = Vector2(0.0797101, 0.0797101)
 texture = ExtResource("1_u5rr7")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-modulate = Color(0.101868, 0.101868, 0.101868, 1)
-position = Vector2(19.3896, 0)
-scale = Vector2(0.0352417, 0.0352415)
-texture = ExtResource("1_u5rr7")
-
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_ue4jp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_tnpoa")
+
+[node name="outputs" type="Node2D" parent="."]
+
+[node name="socket 1" type="Area2D" parent="outputs"]
+position = Vector2(21.544, 0)
+scale = Vector2(0.661781, 0.661781)
+script = ExtResource("4_xfqrx")
+
+[node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
+modulate = Color(0.051971, 0.051971, 0.051971, 1)
+scale = Vector2(0.0701754, 0.0701754)
+texture = ExtResource("1_u5rr7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
+shape = SubResource("CircleShape2D_iqoa2")
 
 [connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="Area2D" method="_on_mouse_exited"]

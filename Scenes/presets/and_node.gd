@@ -8,8 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if $"inputs/1".status and $"inputs/2".status:
-		$"outputs/1".status = true
+	if $"inputs/socket 1".status and $"inputs/socket 2".status:
+		$"outputs/socket 1".status = true
 	else:
-		$"outputs/1".status = false
+		$"outputs/socket 1".status = false
 	pass

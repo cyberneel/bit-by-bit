@@ -27,45 +27,43 @@ tab_size = 24
 
 [node name="inputs" type="Node2D" parent="."]
 
-[node name="1" type="Area2D" parent="inputs"]
+[node name="socket 1" type="Area2D" parent="inputs"]
 position = Vector2(-32, -7)
 scale = Vector2(0.661781, 0.661781)
 script = ExtResource("2_a421n")
-status = true
 
-[node name="Sprite2D" type="Sprite2D" parent="inputs/1"]
+[node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
 modulate = Color(0.051971, 0.051971, 0.051971, 1)
 scale = Vector2(0.0701754, 0.0701754)
 texture = ExtResource("2_dglb5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")
 
-[node name="2" type="Area2D" parent="inputs"]
+[node name="socket 2" type="Area2D" parent="inputs"]
 position = Vector2(-32, 8)
 scale = Vector2(0.661781, 0.661781)
 script = ExtResource("2_a421n")
-status = true
 
-[node name="Sprite2D" type="Sprite2D" parent="inputs/2"]
+[node name="Sprite2D" type="Sprite2D" parent="inputs/socket 2"]
 modulate = Color(0.051971, 0.051971, 0.051971, 1)
 scale = Vector2(0.0701754, 0.0701754)
 texture = ExtResource("2_dglb5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 2"]
 shape = SubResource("CircleShape2D_m0yrc")
 
 [node name="outputs" type="Node2D" parent="."]
 
-[node name="1" type="Area2D" parent="outputs"]
+[node name="socket 1" type="Area2D" parent="outputs"]
 position = Vector2(30, 0)
 scale = Vector2(0.661781, 0.661781)
 script = ExtResource("2_a421n")
 
-[node name="Sprite2D" type="Sprite2D" parent="outputs/1"]
+[node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
 modulate = Color(0.051971, 0.051971, 0.051971, 1)
 scale = Vector2(0.0701754, 0.0701754)
 texture = ExtResource("2_dglb5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")
