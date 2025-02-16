@@ -6,6 +6,8 @@ class_name CameraZoomAndPan
 @onready var camera : Camera2D = $".." if ($".." is Camera2D) else self
 @onready var toolbar := $CanvasLayer/Toolbar  # Adjust path if necessary
 
+@onready var grid_shader_material = get_child(0).material # Replace with actual node path
+
 #region Exported Parameters
 @export_range(1, 20, 0.01) var maxZoom : float = 5.0
 @export_range(0.01, 1, 0.01) var minZoom : float = 0.1
@@ -71,6 +73,10 @@ func _ready() -> void:
 #endregion
 
 func _process(delta: float) -> void:
+	# Grid Stuff
+	if grid_shader_material:
+		grid_shader_material.set_shader_parameter("camera_offset", global_position)
+	
 	var k_pan := pow(panSmoothing, referenceFPS * delta)
 	var k_zoom := pow(zoomSmoothing, referenceFPS * delta)
 
@@ -87,7 +93,7 @@ func _process(delta: float) -> void:
 	if toolbar:
 		toolbar.size = get_viewport_rect().size / camera.zoom
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if not event is InputEventMouse and not event is InputEventAction:
 		return
 

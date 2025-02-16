@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxndfhg6bhjyk"]
+[gd_scene load_steps=11 format=3 uid="uid://dxndfhg6bhjyk"]
 
 [ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="1_damvq"]
 [ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="1_pwmqr"]
 [ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="1_qnt7g"]
+[ext_resource type="PackedScene" uid="uid://uex5epijagq6" path="res://Scenes/presets/camera_2d.tscn" id="1_snpae"]
 [ext_resource type="PackedScene" uid="uid://c81q218yxr71v" path="res://Scenes/presets/xnor_node.tscn" id="1_voy4d"]
 [ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="2_n636q"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="3_klokk"]
@@ -11,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://beqm2xqbf64o0" path="res://Scenes/presets/xor_node.tscn" id="8_mv7py"]
 
 [node name="TestingNeel" type="Node2D"]
+
+[node name="Camera2D" parent="." instance=ExtResource("1_snpae")]
 
 [node name="XnorNode" parent="." instance=ExtResource("1_voy4d")]
 position = Vector2(1095, 413)
