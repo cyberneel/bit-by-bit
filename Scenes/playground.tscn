@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bef828cufqn32"]
 
-[ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 [ext_resource type="Script" path="res://scripts/playground.gd" id="1_p4k5u"]
+[ext_resource type="Texture2D" uid="uid://dtboo3ey64jt3" path="res://new_compressed_texture_2d.tres" id="2_4eoxn"]
 [ext_resource type="Script" path="res://scripts/playground_camera.gd" id="2_ny63l"]
 
 [node name="Node2D" type="Node2D"]
@@ -20,7 +20,7 @@ offset_left = -13283.0
 offset_top = -9013.0
 offset_right = 10920.0
 offset_bottom = 6461.0
-texture = ExtResource("1_8m2ao")
+texture = ExtResource("2_4eoxn")
 stretch_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
