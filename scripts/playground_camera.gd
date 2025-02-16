@@ -22,6 +22,7 @@ class_name CameraZoomAndPan
 @export var zoomToCursor: bool = true
 @export_enum("Auto", "Always", "Never") var useFallbackButtons: String = "Auto"
 @export var panButton : MouseButton = MOUSE_BUTTON_MIDDLE
+@export var panButton2 : MouseButton = MOUSE_BUTTON_LEFT
 @export var zoomInButton : MouseButton = MOUSE_BUTTON_WHEEL_UP
 @export var zoomOutButton : MouseButton = MOUSE_BUTTON_WHEEL_DOWN
 
@@ -98,7 +99,7 @@ func _input(event: InputEvent) -> void:
 		return
 
 	var current_mouse := get_local_mouse_position()
-	if Input.is_action_pressed(panAction) or (fallback_mouse_pan and Input.is_mouse_button_pressed(panButton)):
+	if Input.is_action_pressed(panAction) or (fallback_mouse_pan and Input.is_mouse_button_pressed(panButton2)) or (fallback_mouse_pan and Input.is_mouse_button_pressed(panButton)):
 		position_goal += (last_mouse - current_mouse)
 
 	if Input.is_action_just_pressed(zoomInAction) or (fallback_mouse_zoom_in and Input.is_mouse_button_pressed(zoomInButton)):
