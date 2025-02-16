@@ -1,16 +1,10 @@
 extends Node2D
 
 # Smooth panning and precise zooming for Camera2D
-# Usage: This script may be placed on a child node
-# of a Camera2D or on a Camera2D itself.
-# Suggestion: Change and/or set up the three Input Actions,
-# otherwise the mouse will fall back to hard-wired mouse
-# buttons and you will miss out on alternative bindings,
-# deadzones, and other nice things from the project InputMap.
 class_name CameraZoomAndPan
 
 @onready var camera : Camera2D = $".." if ($".." is Camera2D) else self
-
+@onready var toolbar := $CanvasLayer/Toolbar  # Adjust path if necessary
 
 #region Exported Parameters
 @export_range(1, 20, 0.01) var maxZoom : float = 5.0
@@ -21,7 +15,6 @@ class_name CameraZoomAndPan
 @export var panAction : String = "camera>pan"
 @export var zoomInAction : String = "camera>zoom+"
 @export var zoomOutAction : String = "camera>zoom-"
-
 
 @export_group("Mouse")
 @export var zoomToCursor: bool = true
@@ -44,13 +37,9 @@ class_name CameraZoomAndPan
 	get:
 		return zoomSmoothing
 
-# To make the sliders be pleasantly non-linear
 const slider_exponent : float = 0.25
-
-# To make the smoothing ratios framerate-independent
 const referenceFPS : float = 120.0
 #endregion
-
 
 #region State Initialization
 @onready var zoom_goal := camera.zoom
@@ -63,13 +52,9 @@ var last_mouse : Vector2
 var zoom_mouse : Vector2
 
 func _ready() -> void:
-	# We need to do manually re-assign the editor-serialized values
-	# because the initial editor value doesn't go through the setter
 	panSmoothing = panSmoothing
 	zoomSmoothing = zoomSmoothing
 
-	# If the actions aren't defined and mouse fallback is enabled,
-	# use the default mouse buttons
 	var actions = InputMap.get_actions()
 	var always = useFallbackButtons == "Always"
 	var never = useFallbackButtons == "Never"
@@ -85,9 +70,7 @@ func _ready() -> void:
 		printt("CameraZoomAndPan: TIP - set up all three of the following InputActions:", panAction, zoomInAction, zoomOutAction)
 #endregion
 
-
 func _process(delta: float) -> void:
-	# Calculate FIR / invExp kernels for smoothing
 	var k_pan := pow(panSmoothing, referenceFPS * delta)
 	var k_zoom := pow(zoomSmoothing, referenceFPS * delta)
 
@@ -96,11 +79,13 @@ func _process(delta: float) -> void:
 	var mouse_post_zoom := to_local(get_canvas_transform().affine_inverse().basis_xform(zoom_mouse))
 
 	var zoom_position_offset := (mouse_pre_zoom - mouse_post_zoom) if zoomToCursor else Vector2.ZERO
-
+	
 	position_goal += zoom_position_offset
 	camera.position = camera.position * k_pan + (1.0-k_pan) * position_goal + zoom_position_offset
 
-
+	# Ensure the toolbar scales with the camera zoom
+	if toolbar:
+		toolbar.size = get_viewport_rect().size / camera.zoom
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not event is InputEventMouse and not event is InputEventAction:
@@ -123,7 +108,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	zoom_goal = zoom_goal.clamp(minZoom * Vector2.ONE, maxZoom * Vector2.ONE)
 	last_mouse = current_mouse
 
-
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
-	pass # Replace with function body.
+	pass

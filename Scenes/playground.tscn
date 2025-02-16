@@ -1,5 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bef828cufqn32"]
 
+
 [ext_resource type="Script" path="res://scripts/playground.gd" id="1_p4k5u"]
 [ext_resource type="Texture2D" uid="uid://dtboo3ey64jt3" path="res://new_compressed_texture_2d.tres" id="2_4eoxn"]
 [ext_resource type="Script" path="res://scripts/playground_camera.gd" id="2_ny63l"]
@@ -16,11 +17,11 @@ offset_bottom = 6701.0
 color = Color(0.0511026, 0.258716, 0.355542, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -13283.0
-offset_top = -9013.0
-offset_right = 10920.0
-offset_bottom = 6461.0
-texture = ExtResource("2_4eoxn")
+offset_left = -12802.0
+offset_top = -9051.0
+offset_right = 11401.0
+offset_bottom = 6423.0
+texture = ExtResource("1_8m2ao")
 stretch_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
