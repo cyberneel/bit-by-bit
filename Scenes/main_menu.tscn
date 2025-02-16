@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch1ii2ee51yh2"]
+[gd_scene load_steps=3 format=3 uid="uid://et1u4h28hv2a"]
 
 [ext_resource type="FontFile" uid="uid://drk033dlm2rah" path="res://assets/fonts/upheavtt.ttf" id="1_iwjah"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_j3jly"]
@@ -27,19 +27,19 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 496.0
-offset_top = 242.0
-offset_right = 640.0
-offset_bottom = 273.0
+offset_left = 499.0
+offset_top = 284.0
+offset_right = 643.0
+offset_bottom = 315.0
 text = "Playground Mode
 "
 
 [node name="Button2" type="Button" parent="."]
 offset_left = 503.0
-offset_top = 284.0
+offset_top = 244.0
 offset_right = 638.0
-offset_bottom = 315.0
-text = "Calculator Mode"
+offset_bottom = 275.0
+text = "Tutorial"
 
 [node name="Button3" type="Button" parent="."]
 offset_left = 506.0
@@ -54,9 +54,6 @@ offset_top = 367.0
 offset_right = 605.0
 offset_bottom = 398.0
 text = "Settings"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(581, 315)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
