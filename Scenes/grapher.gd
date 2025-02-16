@@ -19,7 +19,7 @@ func _input(event):
 
 # Handle socket selection and connection
 func handle_socket_click(socket):
-	if selected_socket == null or selected_socket.get_parent().get_parent() == socket.get_parent().get_parent():
+	if selected_socket == null or selected_socket.get_parent().get_parent() == socket.get_parent().get_parent() or selected_socket.get_parent().name == socket.get_parent().name:
 		selected_socket = socket  # First socket selected
 	elif selected_socket != socket:  # Second click (ensure different socket)
 		var new_connection = [selected_socket, socket]
