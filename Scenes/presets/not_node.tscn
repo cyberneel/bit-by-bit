@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmvawtawq2y8x"]
+
+[ext_resource type="Script" path="res://Scenes/presets/not_node.gd" id="1_vhub4"]
+[ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_o2u3a"]
+[ext_resource type="Script" path="res://scripts/socket.gd" id="3_ahck8"]
+[ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="4_7wvb8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
+
+[node name="NotNode" type="Node2D"]
+script = ExtResource("1_vhub4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.077922, 0.0779221)
+texture = ExtResource("2_o2u3a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 1)
+offset_left = -218.167
+offset_top = -141.167
+offset_right = -168.167
+offset_bottom = -115.167
+scale = Vector2(12.7721, 12.7721)
+size_flags_horizontal = 4
+text = "NOT"
+tab_size = 24
+
+[node name="inputs" type="Node2D" parent="."]
+
+[node name="socket 1" type="Area2D" parent="inputs"]
+position = Vector2(-32, -4.76837e-07)
+scale = Vector2(0.661781, 0.661781)
+script = ExtResource("3_ahck8")
+
+[node name="Sprite2D" type="Sprite2D" parent="inputs/socket 1"]
+modulate = Color(0.051971, 0.051971, 0.051971, 1)
+scale = Vector2(0.0701754, 0.0701754)
+texture = ExtResource("4_7wvb8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inputs/socket 1"]
+shape = SubResource("CircleShape2D_m0yrc")
+
+[node name="outputs" type="Node2D" parent="."]
+
+[node name="socket 1" type="Area2D" parent="outputs"]
+position = Vector2(30, 0)
+scale = Vector2(0.661781, 0.661781)
+script = ExtResource("3_ahck8")
+
+[node name="Sprite2D" type="Sprite2D" parent="outputs/socket 1"]
+modulate = Color(0.051971, 0.051971, 0.051971, 1)
+scale = Vector2(0.0701754, 0.0701754)
+texture = ExtResource("4_7wvb8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
+shape = SubResource("CircleShape2D_m0yrc")
