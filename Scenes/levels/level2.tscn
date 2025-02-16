@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbmm8ivg5nfsp"]
 
-[ext_resource type="Script" path="res://Scripts/levels/level.gd" id="1_tfqqg"]
+[ext_resource type="Script" path="res://Scripts/levels/level2.gd" id="1_t00fs"]
 [ext_resource type="PackedScene" uid="uid://uex5epijagq6" path="res://Scenes/presets/camera_2d.tscn" id="2_trd3c"]
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="3_xamsf"]
 [ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="4_mw42q"]
 [ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="5_vo0s6"]
 
 [node name="Node2D2" type="Node2D"]
-script = ExtResource("1_tfqqg")
+script = ExtResource("1_t00fs")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_trd3c")]
 
