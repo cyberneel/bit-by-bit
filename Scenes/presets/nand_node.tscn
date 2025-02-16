@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf1cq4vetwmig"]
+[gd_scene load_steps=9 format=3 uid="uid://bg8owe1hqq6o7"]
 
 [ext_resource type="Script" path="res://Scenes/presets/nand_node.gd" id="1_jlhtp"]
-[ext_resource type="Texture2D" uid="uid://0qlqvbihstqk" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_el6hi"]
+[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_el6hi"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_x564h"]
-[ext_resource type="FontFile" uid="uid://bi758aft6205y" path="res://assets/fonts/Pixelme.ttf" id="3_ytgoc"]
+[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_ytgoc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
@@ -38,6 +38,7 @@ text = "NAND"
 tab_size = 24
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, 5)
 rotation = -1.5708
 scale = Vector2(0.627144, 0.627144)
