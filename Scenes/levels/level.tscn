@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0ycybqhnqxtg"]
+[gd_scene load_steps=16 format=3 uid="uid://b0ycybqhnqxtg"]
 
 [ext_resource type="Script" path="res://Scripts/levels/level.gd" id="1_x1ok3"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_2m3fx"]
@@ -6,14 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://5jhlki8qc2fk" path="res://Scenes/presets/not_node.tscn" id="3_5fkxs"]
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="3_41uxa"]
 [ext_resource type="PackedScene" uid="uid://dhrl06ead8vic" path="res://Scenes/presets/andNode.tscn" id="4_3egt2"]
-[ext_resource type="Texture2D" uid="uid://c4e5as61wajrd" path="res://assets/sprites/grid-png.png" id="4_4ttav"]
+[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="4_4ttav"]
 [ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="5_sckbc"]
 [ext_resource type="PackedScene" uid="uid://bg3vjijnoaxab" path="res://Scenes/presets/or_node.tscn" id="5_x3cjs"]
 [ext_resource type="PackedScene" uid="uid://bg8owe1hqq6o7" path="res://Scenes/presets/nand_node.tscn" id="6_8n6nl"]
 [ext_resource type="PackedScene" uid="uid://cpmqkix8fbcgn" path="res://Scenes/presets/nor_node.tscn" id="7_snnt4"]
 [ext_resource type="PackedScene" uid="uid://dy6lfcbi5ni5s" path="res://Scenes/presets/xor_node.tscn" id="8_ywef8"]
 [ext_resource type="PackedScene" uid="uid://bh6ms58chuqda" path="res://Scenes/presets/xnor_node.tscn" id="9_lfhwm"]
-[ext_resource type="PackedScene" uid="uid://gkbcmdclx4jo" path="res://Scenes/presets/output.tscn" id="10_5ngi8"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/output.tscn" id="10_5ngi8"]
+[ext_resource type="Theme" uid="uid://52e06p43e7jw" path="res://assets/themes/back.tres" id="13_gporx"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_x1ok3")
@@ -67,10 +68,12 @@ offset_bottom = 104.0
 placeholder_text = "0x"
 
 [node name="Button" type="Button" parent="Camera2D/CanvasLayer"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 52.0
 scale = Vector2(1.45369, 2.59979)
-text = "Back to Challenge Menu <---"
+theme = ExtResource("13_gporx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
