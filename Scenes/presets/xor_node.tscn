@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://beqm2xqbf64o0"]
+[gd_scene load_steps=8 format=3 uid="uid://dy6lfcbi5ni5s"]
 
 [ext_resource type="Script" path="res://Scenes/presets/xor_node.gd" id="1_1a3x8"]
-[ext_resource type="Texture2D" uid="uid://0qlqvbihstqk" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_ogjgh"]
+[ext_resource type="Texture2D" uid="uid://bnvsexnv75ckf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_ogjgh"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="3_11dfk"]
-[ext_resource type="FontFile" uid="uid://bi758aft6205y" path="res://assets/fonts/Pixelme.ttf" id="3_x1qwj"]
+[ext_resource type="FontFile" uid="uid://byg8ogas7w75j" path="res://assets/fonts/Pixelme.ttf" id="3_x1qwj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mmh68"]
 

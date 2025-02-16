@@ -38,6 +38,7 @@ text = "NAND"
 tab_size = 24
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, 5)
 rotation = -1.5708
 scale = Vector2(0.627144, 0.627144)

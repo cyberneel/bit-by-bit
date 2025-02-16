@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bef828cufqn32"]
+[gd_scene load_steps=16 format=3 uid="uid://bef828cufqn32"]
 
-[ext_resource type="Texture2D" uid="uid://c4e5as61wajrd" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
+[ext_resource type="Texture2D" uid="uid://baioifmdy42r5" path="res://assets/sprites/grid-png.png" id="1_8m2ao"]
 [ext_resource type="Script" path="res://scripts/playground.gd" id="1_p4k5u"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_cirrh"]
 [ext_resource type="PackedScene" uid="uid://5jhlki8qc2fk" path="res://Scenes/presets/not_node.tscn" id="2_kilk0"]
@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dy6lfcbi5ni5s" path="res://Scenes/presets/xor_node.tscn" id="7_hktnj"]
 [ext_resource type="PackedScene" uid="uid://bh6ms58chuqda" path="res://Scenes/presets/xnor_node.tscn" id="8_xme6e"]
 [ext_resource type="PackedScene" path="res://Scenes/presets/camera_2d.tscn" id="9_h4e6n"]
-[ext_resource type="PackedScene" uid="uid://gkbcmdclx4jo" path="res://Scenes/presets/output.tscn" id="10_3g81d"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/output.tscn" id="10_3g81d"]
+[ext_resource type="Theme" uid="uid://52e06p43e7jw" path="res://assets/themes/back.tres" id="13_07sdv"]
 [ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="13_xlbep"]
 
 [node name="Node2D2" type="Node2D"]
@@ -190,10 +191,12 @@ text = "Output
 "
 
 [node name="Button" type="Button" parent="Camera2D/CanvasLayer"]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 52.0
 scale = Vector2(1.45369, 2.59979)
-text = "Back to Main Menu <---"
+theme = ExtResource("13_07sdv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
