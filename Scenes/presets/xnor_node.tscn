@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c81q218yxr71v"]
+[gd_scene load_steps=8 format=3 uid="uid://c81q218yxr71v"]
 
 [ext_resource type="Script" path="res://Scenes/presets/xnor_node.gd" id="1_hnvgq"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_2dagd"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7x22"]
+size = Vector2(44, 30)
+
 [node name="XnorNode" type="Node2D"]
 script = ExtResource("1_hnvgq")
 
@@ -18,9 +21,9 @@ texture = ExtResource("2_2dagd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sprite2D"]
 modulate = Color(0, 0, 0, 1)
-offset_left = -243.834
+offset_left = -295.167
 offset_top = -141.167
-offset_right = -193.834
+offset_right = -240.167
 offset_bottom = -115.167
 scale = Vector2(12.7721, 12.7721)
 size_flags_horizontal = 4
@@ -69,3 +72,8 @@ texture = ExtResource("4_5s1e1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")
+
+[node name="MoveArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
+shape = SubResource("RectangleShape2D_a7x22")

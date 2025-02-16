@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmvawtawq2y8x"]
+[gd_scene load_steps=7 format=3 uid="uid://cmvawtawq2y8x"]
 
 [ext_resource type="Script" path="res://Scenes/presets/not_node.gd" id="1_vhub4"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_o2u3a"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b0bfpa1ecuo5e" path="res://assets/sprites/socket.png" id="4_7wvb8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8j1q"]
+size = Vector2(44, 30)
 
 [node name="NotNode" type="Node2D"]
 script = ExtResource("1_vhub4")
@@ -54,3 +57,8 @@ texture = ExtResource("4_7wvb8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")
+
+[node name="MoveArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
+shape = SubResource("RectangleShape2D_m8j1q")

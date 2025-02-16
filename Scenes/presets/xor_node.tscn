@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://beqm2xqbf64o0"]
+[gd_scene load_steps=8 format=3 uid="uid://beqm2xqbf64o0"]
 
 [ext_resource type="Script" path="res://Scenes/presets/xor_node.gd" id="1_1a3x8"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_h8g5w"]
@@ -8,6 +8,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhqml"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m0yrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkd4q"]
+size = Vector2(44, 30)
 
 [node name="XorNode" type="Node2D"]
 script = ExtResource("1_1a3x8")
@@ -69,3 +72,8 @@ texture = ExtResource("4_v1y7y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
 shape = SubResource("CircleShape2D_m0yrc")
+
+[node name="MoveArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoveArea2D"]
+shape = SubResource("RectangleShape2D_dkd4q")
