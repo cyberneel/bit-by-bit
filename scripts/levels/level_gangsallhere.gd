@@ -1,7 +1,20 @@
 extends Node
 
+const AND_nodes = 1
+const OR_nodes = 1
+const NOT_nodes = 2
+const NAND_nodes = 1
 const NOR_nodes = 1
+const XOR_nodes = 1
+const XNOR_nodes = 1
+
+var AND_nodes_placed = 0
+var OR_nodes_placed = 0
+var NOT_nodes_placed = 0
+var NAND_nodes_placed = 0
 var NOR_nodes_placed = 0
+var XOR_nodes_placed = 0
+var XNOR_nodes_placed = 0
 
 var inputs: int
 var outputs: int
@@ -32,8 +45,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	$"Camera2D/CanvasLayer/Tool Bar/AND_Counter".text = "x" + str(AND_nodes - AND_nodes_placed)
+	$"Camera2D/CanvasLayer/Tool Bar/OR_Counter".text = "x" + str(OR_nodes - OR_nodes_placed)
+	$"Camera2D/CanvasLayer/Tool Bar/NOT_Counter".text = "x" + str(NOT_nodes - NOT_nodes_placed)
+	$"Camera2D/CanvasLayer/Tool Bar/NAND_Counter".text = "x" + str(NAND_nodes - NAND_nodes_placed)
 	$"Camera2D/CanvasLayer/Tool Bar/NOR_Counter".text = "x" + str(NOR_nodes - NOR_nodes_placed)
-	if($output.get_child(3).get_child(0).status and NOR_nodes - NOR_nodes_placed == 0 and (not $Input.get_child(3).get_child(0).status and not $Input2.get_child(3).get_child(0).status) and $Grapher.connections.size() >= 3):
+	$"Camera2D/CanvasLayer/Tool Bar/XOR_Counter".text = "x" + str(XOR_nodes - XOR_nodes_placed)
+	$"Camera2D/CanvasLayer/Tool Bar/XNOR_Counter".text = "x" + str(XNOR_nodes - XNOR_nodes_placed)
+	if($output.get_child(3).get_child(0).status and AND_nodes - AND_nodes_placed >= 0 and OR_nodes - OR_nodes_placed >= 0 and NOT_nodes - NOT_nodes_placed >= 0 and NAND_nodes - NAND_nodes_placed >= 0 and NOR_nodes - NOR_nodes_placed >= 0 and XOR_nodes - XOR_nodes_placed >= 0 and XNOR_nodes - XNOR_nodes_placed >= 0 and $Input.get_child(3).get_child(0).status and $Grapher.connections.size() >= 13):
 		$Win.show()
 	else:
 		$Win.hide()
@@ -44,25 +63,41 @@ func _on_input_pressed() -> void:
 	inputInstance.position = get_node("Camera2D").position
 	add_child(inputInstance)
 func _on_not_pressed() -> void:
-	var notInstance = notGate.instantiate()
-	notInstance.scale *= 2
-	notInstance.position = get_node("Camera2D").position
-	add_child(notInstance)
+	if(NOT_nodes_placed >= NOT_nodes):
+		pass
+	else:
+		var notInstance = notGate.instantiate()
+		notInstance.scale *= 2
+		notInstance.position = get_node("Camera2D").position
+		add_child(notInstance)
+		NOT_nodes_placed += 1
 func _on_and_pressed() -> void:
-	var andInstance = andGate.instantiate()
-	andInstance.scale *= 2
-	andInstance.position = get_node("Camera2D").position
-	add_child(andInstance)
+	if(AND_nodes_placed >= AND_nodes):
+		pass
+	else:
+		var andInstance = andGate.instantiate()
+		andInstance.scale *= 2
+		andInstance.position = get_node("Camera2D").position
+		add_child(andInstance)
+		AND_nodes_placed += 1
 func _on_or_pressed() -> void:
-	var orInstance = orGate.instantiate()
-	orInstance.scale *= 2
-	orInstance.position = get_node("Camera2D").position
-	add_child(orInstance)
+	if(OR_nodes_placed >= OR_nodes):
+		pass
+	else:
+		var orInstance = orGate.instantiate()
+		orInstance.scale *= 2
+		orInstance.position = get_node("Camera2D").position
+		add_child(orInstance)
+		OR_nodes_placed += 1
 func _on_nand_pressed() -> void:
-	var nandInstance = nandGate.instantiate()
-	nandInstance.scale *= 2
-	nandInstance.position = get_node("Camera2D").position
-	add_child(nandInstance)
+	if(NAND_nodes_placed >= NAND_nodes):
+		pass
+	else:
+		var nandInstance = nandGate.instantiate()
+		nandInstance.scale *= 2
+		nandInstance.position = get_node("Camera2D").position
+		add_child(nandInstance)
+		NAND_nodes_placed += 1
 func _on_nor_pressed() -> void:
 	if(NOR_nodes_placed >= NOR_nodes):
 		pass
@@ -74,15 +109,23 @@ func _on_nor_pressed() -> void:
 		NOR_nodes_placed += 1
 		
 func _on_xor_pressed() -> void:
-	var xorInstance = xorGate.instantiate()
-	xorInstance.scale *= 2
-	xorInstance.position = get_node("Camera2D").position
-	add_child(xorInstance)
+	if(XOR_nodes_placed >= XOR_nodes):
+		pass
+	else:
+		var xorInstance = xorGate.instantiate()
+		xorInstance.scale *= 2
+		xorInstance.position = get_node("Camera2D").position
+		add_child(xorInstance)
+		XOR_nodes_placed += 1
 func _on_xnor_pressed() -> void:
-	var xnorInstance = xnorGate.instantiate()
-	xnorInstance.scale *= 2
-	xnorInstance.position = get_node("Camera2D").position
-	add_child(xnorInstance)
+	if(XNOR_nodes_placed >= XNOR_nodes):
+		pass
+	else:
+		var xnorInstance = xnorGate.instantiate()
+		xnorInstance.scale *= 2
+		xnorInstance.position = get_node("Camera2D").position
+		add_child(xnorInstance)
+		XNOR_nodes_placed += 1
 func _on_output_pressed() -> void:
 	var outputInstance = output.instantiate()
 	outputInstance.position = get_node("Camera2D").position
