@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://g6724xegxear"]
+[gd_scene load_steps=4 format=3 uid="uid://bs3oeajixubm7"]
 
 [ext_resource type="Script" path="res://scripts/playground_camera.gd" id="1_xrw3u"]
-[ext_resource type="Material" path="res://assets/shaders/background.material" id="2_ek5u2"]
+[ext_resource type="Material" uid="uid://bgr85usmbifur" path="res://assets/shaders/background.material" id="2_ek5u2"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="3_tyti0"]
 
 [node name="Camera2D" type="Camera2D"]
 scale = Vector2(1.97722, 1.97722)
 script = ExtResource("1_xrw3u")
-minZoom = 1.0
+minZoom = 0.8
 
 [node name="Background" type="Sprite2D" parent="."]
 material = ExtResource("2_ek5u2")
