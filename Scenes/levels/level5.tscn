@@ -97,22 +97,22 @@ text = "Level Passed!"
 placeholder_text = "placeholder"
 
 [node name="Instructions" type="TextEdit" parent="."]
-offset_left = 311.0
-offset_top = -160.0
-offset_right = 761.0
-offset_bottom = -84.0
+offset_left = 160.0
+offset_top = -166.0
+offset_right = 610.0
+offset_bottom = -90.0
 text = "Don't turn anything on!
 Use a NOR gate to keep everything off, except the light."
 placeholder_text = "placeholder"
 
 [node name="Input" parent="." instance=ExtResource("2_s2vhf")]
-position = Vector2(-202, 138)
+position = Vector2(-283, 119)
 
 [node name="Input2" parent="." instance=ExtResource("2_s2vhf")]
-position = Vector2(-204, -126)
+position = Vector2(-284, -164)
 
 [node name="output" parent="." instance=ExtResource("10_ynu5f")]
-position = Vector2(502, -2.38419e-07)
+position = Vector2(410, 1)
 
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOR" to="." method="_on_nor_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="." method="_on_button_pressed"]

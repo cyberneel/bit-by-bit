@@ -1,25 +1,23 @@
-[gd_scene load_steps=15 format=3 uid="uid://c1nj35v3j1au7"]
+[gd_scene load_steps=14 format=3 uid="uid://bfxfjymd4k4j0"]
 
-[ext_resource type="Script" path="res://Scripts/levels/level5.gd" id="1_xbkis"]
+[ext_resource type="Script" path="res://scripts/levels/level6.gd" id="1_yihu3"]
 [ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_4oqxf"]
-[ext_resource type="PackedScene" uid="uid://5jhlki8qc2fk" path="res://Scenes/presets/not_node.tscn" id="3_jnole"]
-[ext_resource type="PackedScene" uid="uid://dhrl06ead8vic" path="res://Scenes/presets/andNode.tscn" id="4_n2ywv"]
-[ext_resource type="PackedScene" uid="uid://bg3vjijnoaxab" path="res://Scenes/presets/or_node.tscn" id="5_ts01k"]
-[ext_resource type="PackedScene" uid="uid://bg8owe1hqq6o7" path="res://Scenes/presets/nand_node.tscn" id="6_w2mgn"]
-[ext_resource type="PackedScene" uid="uid://cpmqkix8fbcgn" path="res://Scenes/presets/nor_node.tscn" id="7_ax1kc"]
-[ext_resource type="PackedScene" uid="uid://dy6lfcbi5ni5s" path="res://Scenes/presets/xor_node.tscn" id="8_j751d"]
-[ext_resource type="PackedScene" uid="uid://bh6ms58chuqda" path="res://Scenes/presets/xnor_node.tscn" id="9_3l60y"]
-[ext_resource type="PackedScene" uid="uid://gkbcmdclx4jo" path="res://Scenes/presets/output.tscn" id="10_2kj3f"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/camera_2d.tscn" id="11_g0306"]
+[ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="3_jnole"]
+[ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="5_ts01k"]
+[ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="6_w2mgn"]
+[ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="7_ax1kc"]
+[ext_resource type="PackedScene" uid="uid://beqm2xqbf64o0" path="res://Scenes/presets/xor_node.tscn" id="8_j751d"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/xnor_node.tscn" id="9_3l60y"]
+[ext_resource type="PackedScene" uid="uid://gj0v3qorngjt" path="res://Scenes/presets/output.tscn" id="10_2kj3f"]
+[ext_resource type="PackedScene" uid="uid://uex5epijagq6" path="res://Scenes/presets/camera_2d.tscn" id="11_g0306"]
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="12_qy86s"]
-[ext_resource type="Texture2D" uid="uid://c4e5as61wajrd" path="res://assets/sprites/grid-png.png" id="13_ltdic"]
-[ext_resource type="PackedScene" path="res://Scenes/presets/grapher.tscn" id="14_kh6x4"]
+[ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="13_ltdic"]
+[ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="14_kh6x4"]
 
 [node name="Node2D2" type="Node2D"]
-script = ExtResource("1_xbkis")
+script = ExtResource("1_yihu3")
 input = ExtResource("2_4oqxf")
 notGate = ExtResource("3_jnole")
-andGate = ExtResource("4_n2ywv")
 orGate = ExtResource("5_ts01k")
 nandGate = ExtResource("6_w2mgn")
 norGate = ExtResource("7_ax1kc")
@@ -28,6 +26,7 @@ xnorGate = ExtResource("9_3l60y")
 output = ExtResource("10_2kj3f")
 
 [node name="Camera2D" parent="." instance=ExtResource("11_g0306")]
+position = Vector2(-40, 64)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
@@ -38,114 +37,12 @@ offset_bottom = 722.0
 scale = Vector2(1, 1.00596)
 color = Color(0.223103, 0.223103, 0.223103, 1)
 
-[node name="Input" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 7.95263
-offset_right = 176.0
-offset_bottom = 73.9526
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/Input"]
-layout_mode = 0
-offset_left = 50.0
-offset_top = 15.0
-offset_right = 92.0
-offset_bottom = 38.0
-theme = ExtResource("12_qy86s")
-text = "Input"
-
-[node name="NOT" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 95.4314
-offset_right = 176.0
-offset_bottom = 161.431
-theme = ExtResource("12_qy86s")
-text = "
-"
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NOT"]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 16.0
-offset_right = 112.0
-offset_bottom = 48.0
-text = "NOT"
-horizontal_alignment = 1
-
-[node name="AND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 216.0
-offset_top = 95.4313
-offset_right = 352.0
-offset_bottom = 161.431
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/AND"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 15.9052
-offset_right = 104.0
-offset_bottom = 47.9052
-text = "AND"
-horizontal_alignment = 1
-
-[node name="OR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 392.0
-offset_top = 95.4313
-offset_right = 528.0
-offset_bottom = 161.431
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/OR"]
-layout_mode = 0
-offset_left = 55.0
-offset_top = 16.0
-offset_right = 95.0
-offset_bottom = 39.0
-text = "OR"
-
-[node name="NAND" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 568.0
-offset_top = 95.4314
-offset_right = 704.0
-offset_bottom = 161.431
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NAND"]
-layout_mode = 0
-offset_left = 43.0
-offset_top = 17.0
-offset_right = 91.0
-offset_bottom = 40.0
-text = "NAND"
-
-[node name="NOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 744.0
-offset_top = 95.4314
-offset_right = 880.0
-offset_bottom = 161.431
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/NOR"]
-layout_mode = 0
-offset_left = 49.0
-offset_top = 18.0
-offset_right = 89.0
-offset_bottom = 41.0
-text = "NOR
-"
-
 [node name="XOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 920.0
-offset_top = 95.4314
-offset_right = 1056.0
-offset_bottom = 161.431
+offset_left = 560.0
+offset_top = 55.6682
+offset_right = 696.0
+offset_bottom = 121.668
 theme = ExtResource("12_qy86s")
 
 [node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/XOR"]
@@ -156,44 +53,27 @@ offset_right = 91.0
 offset_bottom = 38.0
 text = "XOR"
 
-[node name="XNOR" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
+[node name="XOR_Counter" type="TextEdit" parent="Camera2D/CanvasLayer/Tool Bar"]
 layout_mode = 0
-offset_left = 1096.0
-offset_top = 95.4314
-offset_right = 1232.0
-offset_bottom = 161.431
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/XNOR"]
-layout_mode = 0
-offset_left = 44.0
-offset_top = 15.0
-offset_right = 90.0
-offset_bottom = 38.0
-text = "XNOR"
-
-[node name="Output" type="Button" parent="Camera2D/CanvasLayer/Tool Bar"]
-layout_mode = 0
-offset_left = 216.0
-offset_top = 7.95259
-offset_right = 352.0
-offset_bottom = 73.9526
-theme = ExtResource("12_qy86s")
-
-[node name="Label" type="Label" parent="Camera2D/CanvasLayer/Tool Bar/Output"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 15.9053
-offset_right = 96.0
-offset_bottom = 38.9053
-text = "Output
-"
+offset_left = 704.0
+offset_top = 71.5734
+offset_right = 745.0
+offset_bottom = 107.573
+placeholder_text = "x0"
 
 [node name="Button" type="Button" parent="Camera2D/CanvasLayer"]
 offset_right = 8.0
 offset_bottom = 8.0
 scale = Vector2(1.45369, 2.59979)
 text = "Back to Challenge Menu <---"
+
+[node name="Win" type="TextEdit" parent="."]
+offset_left = 64.0
+offset_top = 136.0
+offset_right = 185.0
+offset_bottom = 176.0
+text = "Level Passed!"
+placeholder_text = "placeholder"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -214,13 +94,24 @@ stretch_mode = 1
 
 [node name="Grapher" parent="." instance=ExtResource("14_kh6x4")]
 
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/Input" to="." method="_on_input_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOT" to="." method="_on_not_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/AND" to="." method="_on_and_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/OR" to="." method="_on_or_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NAND" to="." method="_on_nand_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/NOR" to="." method="_on_nor_pressed"]
+[node name="Instructions" type="TextEdit" parent="."]
+offset_left = -208.0
+offset_top = -360.0
+offset_right = 242.0
+offset_bottom = -264.0
+text = "Turn the lightbulb on when the inputs have different values
+Use a XOR Gate"
+placeholder_text = "placeholder"
+
+[node name="output" parent="." instance=ExtResource("10_2kj3f")]
+position = Vector2(408, -104)
+scale = Vector2(12.1401, 12.1401)
+
+[node name="Input" parent="." instance=ExtResource("2_4oqxf")]
+position = Vector2(-304, -136)
+
+[node name="Input2" parent="." instance=ExtResource("2_4oqxf")]
+position = Vector2(-320, 48)
+
 [connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XOR" to="." method="_on_xor_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/XNOR" to="." method="_on_xnor_pressed"]
-[connection signal="pressed" from="Camera2D/CanvasLayer/Tool Bar/Output" to="." method="_on_output_pressed"]
 [connection signal="pressed" from="Camera2D/CanvasLayer/Button" to="." method="_on_button_pressed"]
