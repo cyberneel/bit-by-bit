@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://du4e8ujex043g"]
+[gd_scene load_steps=9 format=3 uid="uid://du4e8ujex043g"]
 
 [ext_resource type="Script" path="res://scripts/settings.gd" id="1_i6xm8"]
+[ext_resource type="Script" path="res://scripts/control.gd" id="2_jw0ww"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_sjrb2"]
+
+[sub_resource type="Theme" id="Theme_2jbnj"]
+HSlider/icons/grabber = SubResource("CanvasTexture_sjrb2")
+
+[sub_resource type="MeshTexture" id="MeshTexture_x0o7h"]
+
+[sub_resource type="MeshTexture" id="MeshTexture_ht30b"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dpm5b"]
+
+[sub_resource type="Theme" id="Theme_tsj17"]
+HSlider/icons/grabber = SubResource("MeshTexture_x0o7h")
+HSlider/icons/grabber_highlight = SubResource("MeshTexture_ht30b")
+HSlider/icons/tick = SubResource("AnimatedTexture_dpm5b")
 
 [node name="Settings" type="Node2D"]
 script = ExtResource("1_i6xm8")
@@ -41,14 +58,29 @@ action_mode = 0
 keep_pressed_outside = true
 text = "Music Toggle"
 
-[node name="HSlider" type="HSlider" parent="."]
-offset_left = 306.0
-offset_top = 201.0
-offset_right = 314.0
-offset_bottom = 217.0
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 119.0
+offset_right = 134.0
+offset_bottom = 159.0
+scale = Vector2(1.01226, 0.462554)
+theme = SubResource("Theme_2jbnj")
+script = ExtResource("2_jw0ww")
+
+[node name="HSlider" type="HSlider" parent="Control"]
+offset_left = 331.929
+offset_top = 185.924
+offset_right = 339.929
+offset_bottom = 201.924
 scale = Vector2(36.545, 9.55015)
-max_value = 10.0
+theme = SubResource("Theme_tsj17")
+max_value = 1.0
+step = 0.05
+value = 0.5
 tick_count = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="toggled" from="Button2" to="." method="_on_button_2_toggled"]
+[connection signal="value_changed" from="Control/HSlider" to="." method="_on_h_slider_value_changed"]
