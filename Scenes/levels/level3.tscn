@@ -1,13 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://yr2wbmjvwisv"]
+[gd_scene load_steps=15 format=3 uid="uid://yr2wbmjvwisv"]
 
 [ext_resource type="Script" path="res://Scripts/levels/level3.gd" id="1_jxvqo"]
+[ext_resource type="PackedScene" uid="uid://b0q70wnwsirm4" path="res://Scenes/presets/input.tscn" id="2_jyf30"]
 [ext_resource type="PackedScene" uid="uid://uex5epijagq6" path="res://Scenes/presets/camera_2d.tscn" id="2_tt6ts"]
+[ext_resource type="PackedScene" uid="uid://cmvawtawq2y8x" path="res://Scenes/presets/not_node.tscn" id="3_1vt5l"]
 [ext_resource type="Theme" uid="uid://bbwlpdqfju23a" path="res://assets/themes/new_theme.tres" id="3_simf8"]
+[ext_resource type="PackedScene" uid="uid://cbshvmksc08og" path="res://Scenes/presets/andNode.tscn" id="4_2deqs"]
 [ext_resource type="Texture2D" uid="uid://bbbtd0aw6nn21" path="res://assets/sprites/grid-png.png" id="4_q7vtc"]
+[ext_resource type="PackedScene" uid="uid://pb6ywh7fqf1r" path="res://Scenes/presets/or_node.tscn" id="5_1yie8"]
 [ext_resource type="PackedScene" uid="uid://cce2kfsnbryky" path="res://Scenes/presets/grapher.tscn" id="5_hxnty"]
+[ext_resource type="PackedScene" uid="uid://cf1cq4vetwmig" path="res://Scenes/presets/nand_node.tscn" id="6_tqpoj"]
+[ext_resource type="PackedScene" uid="uid://ds0vq04w8x717" path="res://Scenes/presets/nor_node.tscn" id="7_myiyp"]
+[ext_resource type="PackedScene" uid="uid://beqm2xqbf64o0" path="res://Scenes/presets/xor_node.tscn" id="8_nafwm"]
+[ext_resource type="PackedScene" path="res://Scenes/presets/xnor_node.tscn" id="9_31oq5"]
+[ext_resource type="PackedScene" uid="uid://gj0v3qorngjt" path="res://Scenes/presets/output.tscn" id="10_78v6p"]
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_jxvqo")
+input = ExtResource("2_jyf30")
+notGate = ExtResource("3_1vt5l")
+andGate = ExtResource("4_2deqs")
+orGate = ExtResource("5_1yie8")
+nandGate = ExtResource("6_tqpoj")
+norGate = ExtResource("7_myiyp")
+xorGate = ExtResource("8_nafwm")
+xnorGate = ExtResource("9_31oq5")
+output = ExtResource("10_78v6p")
+Camera = ExtResource("2_tt6ts")
 
 [node name="Camera2D" parent="." instance=ExtResource("2_tt6ts")]
 
