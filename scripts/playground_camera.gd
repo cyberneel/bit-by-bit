@@ -22,7 +22,7 @@ class_name CameraZoomAndPan
 @export var zoomToCursor: bool = true
 @export_enum("Auto", "Always", "Never") var useFallbackButtons: String = "Auto"
 @export var panButton : MouseButton = MOUSE_BUTTON_MIDDLE
-@export var panButton2 : MouseButton = MOUSE_BUTTON_LEFT
+@export var panButton2 : MouseButton = MOUSE_BUTTON_RIGHT
 @export var zoomInButton : MouseButton = MOUSE_BUTTON_WHEEL_UP
 @export var zoomOutButton : MouseButton = MOUSE_BUTTON_WHEEL_DOWN
 
