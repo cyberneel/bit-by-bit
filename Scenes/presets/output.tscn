@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://gj0v3qorngjt"]
+[gd_scene load_steps=9 format=3 uid="uid://gkbcmdclx4jo"]
 
 [ext_resource type="Script" path="res://Scenes/presets/outputMove.gd" id="1_4xc64"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="1_s1tnc"]
-[ext_resource type="Texture2D" uid="uid://0sponct12guf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_khp3j"]
+[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_khp3j"]
 [ext_resource type="Script" path="res://Scenes/presets/output.gd" id="3_wfymi"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="4_q3q11"]
 
@@ -56,7 +56,6 @@ shape = SubResource("CircleShape2D_iqoa2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(12.215, 0.162867)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xuxsi")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://Scenes/presets/inputMove.gd" id="1_qn1xb"]
 [ext_resource type="Script" path="res://Scenes/presets/input.gd" id="1_ue4jp"]
-[ext_resource type="Texture2D" uid="uid://0sponct12guf" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_8fx2w"]
+[ext_resource type="Texture2D" uid="uid://blj84l3cahssg" path="res://assets/sprites/kenney_pixel-ui-pack/Spritesheet/UIpackSheet_transparent.png" id="2_8fx2w"]
 [ext_resource type="Texture2D" uid="uid://dvktukvtmrfsu" path="res://assets/sprites/Untitled.png" id="2_brltk"]
 [ext_resource type="Script" path="res://scripts/socket.gd" id="4_xfqrx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tnpoa"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ltvb"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_iqoa2"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qm5ec"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o8n47"]
 size = Vector2(5.89577, 6.30293)
@@ -34,7 +34,7 @@ region_rect = Rect2(19, 397, 14, 14)
 script = ExtResource("1_ue4jp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_tnpoa")
+shape = SubResource("CircleShape2D_1ltvb")
 
 [node name="outputs" type="Node2D" parent="."]
 
@@ -50,11 +50,10 @@ region_enabled = true
 region_rect = Rect2(91, 91, 14, 14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="outputs/socket 1"]
-shape = SubResource("CircleShape2D_iqoa2")
+shape = SubResource("CircleShape2D_qm5ec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(12.215, 0.162867)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_o8n47")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
