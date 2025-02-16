@@ -12,10 +12,6 @@ func _ready() -> void:
 	print(str(inputs) + '->' + str(outputs))
 	input = inputPreset.instantiate()
 	add_child(input)
-	
-	
-	
-	
 
 
 
